@@ -1,0 +1,74 @@
+/* Home page specific styles */
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(249, 250, 251, 0.9)),
+                url('../../images/hero-bg.jpg') no-repeat center center/cover;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Featured Projects */
+.featured-projects {
+    padding: 6rem 0;
+    background-color: var(--bg-secondary);
+}
+
+/* Testimonials */
+.testimonial-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Stats Section */
+.stat-item {
+    text-align: center;
+    padding: 2rem;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 6rem 2rem;
+    text-align: center;
+    border-radius: 1rem;
+    margin: 4rem 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 80vh;
+        padding: 4rem 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+}

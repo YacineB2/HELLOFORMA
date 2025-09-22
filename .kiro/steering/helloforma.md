@@ -1,0 +1,32 @@
+---
+inclusion: manual
+---
+## HelloForma — Minimal Cursor Rules
+
+- Pages: [index.html](mdc:index.html), [work.html](mdc:work.html), [studio.html](mdc:studio.html), [services.html](mdc:services.html), [insights.html](mdc:insights.html), [contact.html](mdc:contact.html)
+- Components: [components/header.html](mdc:components/header.html), [components/footer.html](mdc:components/footer.html)
+- Scripts: [assets/js/main.js](mdc:assets/js/main.js) (use this), [assets/js/components.js](mdc:assets/js/components.js) (avoid; superseded by main.js)
+- Styles: [assets/css/main.css](mdc:assets/css/main.css), per-page under [assets/css/pages/](mdc:assets/css/pages)
+
+### How to wire a page
+1) Add placeholders:
+   - `<div id="header"></div>`
+   - `<div id="footer"></div>`
+2) Include assets in `<head>` (as needed):
+   - Tailwind CDN, AOS CSS, Feather Icons
+   - Page CSS: `/assets/css/main.css` + `/assets/css/pages/<page>.css`
+3) At end of `<body>` include: `/assets/js/main.js`
+
+### Conventions
+- Use shared header/footer via `ComponentLoader` in `main.js`.
+- Single Feather Icons include; `main.js` calls `feather.replace()`.
+- If using `data-aos`, include AOS JS; `main.js` will init.
+- Keep favicon path consistent (e.g., `/favicon.ico`).
+
+### Checklist
+- Header/footer load on page
+- `assets/js/main.js` included once
+- No duplicate loaders or inline menu scripts
+- Links go to real pages (not `#`), `.nav-link` used for active state
+- Images have `alt`; prefer local assets under `assets/images/`
+

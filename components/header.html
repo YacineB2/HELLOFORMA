@@ -1,0 +1,61 @@
+<!-- Header Component -->
+<nav class="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20 items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <span class="text-2xl font-bold gradient-text">HelloForma</span>
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="work.html" class="nav-link text-gray-700 hover:text-indigo-600 transition">Projets</a>
+                <a href="studio.html" class="nav-link text-gray-700 hover:text-indigo-600 transition">Studio</a>
+                <a href="services.html" class="nav-link text-gray-700 hover:text-indigo-600 transition">Services</a>
+                <a href="insights.html" class="nav-link text-gray-700 hover:text-indigo-600 transition">Actualités</a>
+                <a href="contact.html" class="px-4 py-2 rounded-full bg-indigo-600 text-white hover:bg-indigo-700 transition">Contact</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-gray-700" id="mobile-menu-btn" aria-label="Ouvrir le menu" title="Ouvrir le menu">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden pb-4">
+            <a href="work.html" class="block py-2 text-gray-700 hover:text-indigo-600 transition">Projets</a>
+            <a href="studio.html" class="block py-2 text-gray-700 hover:text-indigo-600 transition">Studio</a>
+            <a href="services.html" class="block py-2 text-gray-700 hover:text-indigo-600 transition">Services</a>
+            <a href="insights.html" class="block py-2 text-gray-700 hover:text-indigo-600 transition">Actualités</a>
+            <a href="contact.html" class="block py-2 text-gray-700 hover:text-indigo-600 transition">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Add this script at the end of the header to handle mobile menu -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                // Toggle between menu and x icon
+                const icon = mobileMenuBtn.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.setAttribute('data-feather', 'menu');
+                    mobileMenuBtn.setAttribute('aria-label', 'Ouvrir le menu');
+                    mobileMenuBtn.setAttribute('title', 'Ouvrir le menu');
+                } else {
+                    icon.setAttribute('data-feather', 'x');
+                    mobileMenuBtn.setAttribute('aria-label', 'Fermer le menu');
+                    mobileMenuBtn.setAttribute('title', 'Fermer le menu');
+                }
+                // Refresh Feather Icons
+                if (typeof feather !== 'undefined') {
+                    feather.replace();
+                }
+            });
+        }
+    });
+</script>
