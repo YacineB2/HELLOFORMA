@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="fr" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Méthodes | HelloForma</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Feather Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'helloforma-blue': '#2563EB',
+                        'helloforma-dark': '#1D4ED8',
+                        'helloforma-accent': '#059669'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .graduation-icon {
+            width: 32px;
+            height: 32px;
+            background: #2563EB;
+            border-radius: 6px;
+            padding: 6px;
+            fill: white;
+        }
+        
+        .method-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .method-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #2563EB;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .process-step {
+            position: relative;
+        }
+
+        .process-step::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -50%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, #2563EB, transparent);
+            transform: translateY(-50%);
+        }
+
+        .process-step:last-child::after {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased bg-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-md z-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <svg class="graduation-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/>
+                    </svg>
+                    <span class="text-xl font-bold text-gray-900">HelloForma</span>
+                </a>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="formations.html" class="nav-link text-gray-700 hover:text-helloforma-blue">Formations</a>
+                    <a href="methodes.html" class="nav-link text-helloforma-blue font-medium">Méthodes</a>
+                    <a href="index.html#certifications" class="nav-link text-gray-700 hover:text-helloforma-blue">Certifications</a>
+                    <a href="index.html#contact" class="px-6 py-2 bg-helloforma-blue text-white rounded-lg hover:bg-helloforma-dark transition font-medium">
+                        Nous Contacter
+                    </a>
+                </div>
+                
+                <button class="md:hidden">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-helloforma-accent to-emerald-700">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                Nos Méthodes Pédagogiques
+            </h1>
+            <p class="text-xl text-emerald-100 mb-8">
+                Une approche innovante et personnalisée pour garantir l'efficacité de vos formations
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#approches" class="px-6 py-3 bg-white text-helloforma-accent rounded-lg hover:bg-gray-100 transition font-medium">
+                    Approches Pédagogiques
+                </a>
+                <a href="#modalites" class="px-6 py-3 bg-white/20 text-white rounded-lg hover:bg-white/30 transition font-medium">
+                    Modalités
+                </a>
+                <a href="#outils" class="px-6 py-3 bg-white/20 text-white rounded-lg hover:bg-white/30 transition font-medium">
+                    Outils
+                </a>
+                <a href="#accompagnement" class="px-6 py-3 bg-white/20 text-white rounded-lg hover:bg-white/30 transition font-medium">
+                    Accompagnement
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Overview -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Notre Processus de Formation</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Un parcours structuré en 5 étapes pour maximiser l'impact de votre formation
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-5 gap-8">
+                <div class="process-step text-center" data-aos="fade-up">
+                    <div class="w-16 h-16 bg-helloforma-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white font-bold text-xl">1</span>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Analyse des Besoins</h3>
+                    <p class="text-sm text-gray-600">Audit complet de vos objectifs et contraintes</p>
+                </div>
+
+                <div class="process-step text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-helloforma-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white font-bold text-xl">2</span>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Conception</h3>
+                    <p class="text-sm text-gray-600">Création du programme personnalisé</p>
+                </div>
+
+                <div class="process-step text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-helloforma-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white font-bold text-xl">3</span>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Formation</h3>
+                    <p class="text-sm text-gray-600">Déploiement avec nos experts</p>
+                </div>
+
+                <div class="process-step text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-helloforma-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white font-bold text-xl">4</span>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Évaluation</h3>
+                    <p class="text-sm text-gray-600">Mesure des acquis et de la satisfaction</p>
+                </div>
+
+                <div class="process-step text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 bg-helloforma-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white font-bold text-xl">5</span>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Suivi</h3>
+                    <p class="text-sm text-gray-600">Accompagnement post-formation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approches Pédagogiques -->
+    <section id="approches" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Approches Pédagogiques Innovantes</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Des méthodes éprouvées pour un apprentissage efficace et durable
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="method-card bg-white rounded-xl p-8 shadow-lg" data-aos="fade-up">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="layers" class="text-helloforma-blue"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Blended Learning</h3>
+                    <p class="text-gray-600 mb-4">
+                        Combinaison optimale entre présentiel et distanciel pour s'adapter à tous les profils d'apprentissage.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li>• Flexibilité maximale</li>
+                        <li>• Interaction humaine préservée</li>
+                        <li>• Rythme personnalisé</li>
+                    </ul>
+                </div>
+
+                <div class="method-card bg-white rounded-xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="zap" class="text-helloforma-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Microlearning</h3>
+                    <p class="text-gray-600 mb-4">
+                        Modules courts et ciblés de 5-15 minutes pour une assimilation optimale et une intégration facile.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li>• Concentration maximale</li>
+                        <li>• Mémorisation renforcée</li>
+                        <li>• Intégration quotidienne</li>
+                    </ul>
+                </div>
+
+                <div class="method-card bg-white rounded-xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="tool" class="text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Learning by Doing</h3>
+                    <p class="text-gray-600 mb-4">
+                        Apprentissage par la pratique avec des projets concrets et des mises en situation réelles.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li>• Projets authentiques</li>
+                        <li>• Compétences opérationnelles</li>
+                        <li>• Confiance renforcée</li>
+                    </ul>
+                </div>
+
+                <div class="method-card bg-white rounded-xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="users" class="text-orange-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Peer Learning</h3>
+                    <p class="text-gray-600 mb-4">
+                        Apprentissage collaboratif favorisant les échanges et le partage d'expériences entre pairs.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li>• Enrichissement mutuel</li>
+                        <li>• Réseau professionnel</li>
+                        <li>• Motivation collective</li>
+                    </ul>
+                </div>
+
+                <div class="method-card bg-white rounded-xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="gamepad-2" class="text-pink-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Gamification</h3>
+                    <p class="text-gray-600 mb-4">
+                        Éléments ludiques, challenges et récompenses pour maintenir l'engagement et la motivation.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li>• Engagement renforcé</li>
+                        <li>• Progression visible</li>
+                        <li>• Plaisir d'apprendre</li>
+                    </ul>
+                </div>
+
+                <div class="method-card bg-white rounded-xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="trending-up" class="text-teal-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Adaptive Learning</h3>
+                    <p class="text-gray-600 mb-4">
+                        Parcours personnalisés qui s'adaptent automatiquement au niveau et au rythme de chaque apprenant.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li>• Personnalisation IA</li>
+                        <li>• Efficacité optimisée</li>
+                        <li>• Progression garantie</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>    
+<!-- Modalités de Formation -->
+    <section id="modalites" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Modalités de Formation</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Choisissez le format qui correspond le mieux à vos contraintes et préférences
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="method-card bg-white rounded-xl p-8 shadow-lg border-2 border-helloforma-blue" data-aos="fade-up">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="users" class="text-helloforma-blue"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Présentiel</h3>
+                    <p class="text-gray-600 mb-6">
+                        Sessions en salle avec formateur expert pour un apprentissage interactif et personnalisé.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
+                            Interaction directe avec le formateur
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
+                            Dynamique de groupe stimulante
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
+                            Exercices pratiques en temps réel
+                        </div>
+                    </div>
+                </div>
+
+                <div class="method-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="video" class="text-helloforma-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Classes Virtuelles</h3>
+                    <p class="text-gray-600 mb-6">
+                        Formation à distance en temps réel avec interaction complète et outils collaboratifs.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
+                            Économie de temps et déplacements
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
+                            Outils interactifs avancés
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
+                            Enregistrement des sessions
+                        </div>
+                    </div>
+                </div>
+
+                <div class="method-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="play-circle" class="text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">E-learning</h3>
+                    <p class="text-gray-600 mb-6">
+                        Modules auto-rythmés accessibles 24h/24 avec suivi personnalisé de progression.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
+                            Flexibilité totale d'horaires
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
+                            Rythme personnalisé
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
+                            Accès illimité aux contenus
+                        </div>
+                    </div>
+                </div>
+
+                <div class="method-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="user" class="text-orange-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Coaching Individuel</h3>
+                    <p class="text-gray-600 mb-6">
+                        Accompagnement personnalisé one-to-one pour des besoins spécifiques et un suivi sur mesure.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
+                            Attention 100% dédiée
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
+                            Programme ultra-personnalisé
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
+                            Progression accélérée
+                        </div>
+                    </div>
+                </div>
+
+                <div class="method-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="settings" class="text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Ateliers Pratiques</h3>
+                    <p class="text-gray-600 mb-6">
+                        Sessions hands-on avec mise en situation réelle et manipulation d'outils professionnels.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
+                            Apprentissage par l'action
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
+                            Outils professionnels
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
+                            Cas concrets métier
+                        </div>
+                    </div>
+                </div>
+
+                <div class="method-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="briefcase" class="text-teal-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Intra-entreprise</h3>
+                    <p class="text-gray-600 mb-6">
+                        Formations sur mesure dans vos locaux, adaptées à votre culture et vos enjeux spécifiques.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
+                            Contenu 100% personnalisé
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
+                            Dans vos locaux
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
+                            Cohésion d'équipe renforcée
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outils et Technologies -->
+    <section id="outils" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Outils et Technologies</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Une plateforme technologique de pointe pour une expérience d'apprentissage optimale
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center" data-aos="fade-up">
+                    <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-6">
+                        <i data-feather="monitor" class="text-helloforma-blue"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Plateforme LMS</h3>
+                    <p class="text-gray-600 text-sm">
+                        Interface moderne et intuitive pour gérer vos parcours, suivre vos progrès et accéder aux ressources.
+                    </p>
+                </div>
+
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-6">
+                        <i data-feather="headphones" class="text-helloforma-accent"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Réalité Virtuelle</h3>
+                    <p class="text-gray-600 text-sm">
+                        Immersion totale pour certaines formations techniques avec des environnements 3D réalistes.
+                    </p>
+                </div>
+
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-6">
+                        <i data-feather="activity" class="text-purple-600"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Simulateurs</h3>
+                    <p class="text-gray-600 text-sm">
+                        Environnements de pratique sécurisés pour tester vos compétences sans risque.
+                    </p>
+                </div>
+
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mx-auto mb-6">
+                        <i data-feather="share-2" class="text-orange-600"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Outils Collaboratifs</h3>
+                    <p class="text-gray-600 text-sm">
+                        Miro, Slack, Teams pour favoriser les échanges et le travail en équipe.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Analytics Dashboard Preview -->
+            <div class="mt-16 bg-white rounded-2xl shadow-xl p-8" data-aos="fade-up">
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Tableau de Bord Intelligent</h3>
+                    <p class="text-gray-600">Suivez vos progrès en temps réel avec des analytics détaillés</p>
+                </div>
+                
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="text-center p-6 bg-blue-50 rounded-lg">
+                        <div class="text-2xl font-bold text-helloforma-blue mb-2">87%</div>
+                        <div class="text-sm text-gray-600">Progression Globale</div>
+                    </div>
+                    <div class="text-center p-6 bg-green-50 rounded-lg">
+                        <div class="text-2xl font-bold text-helloforma-accent mb-2">24h</div>
+                        <div class="text-sm text-gray-600">Temps d'Apprentissage</div>
+                    </div>
+                    <div class="text-center p-6 bg-purple-50 rounded-lg">
+                        <div class="text-2xl font-bold text-purple-600 mb-2">12</div>
+                        <div class="text-sm text-gray-600">Modules Complétés</div>
+                    </div>
+                    <div class="text-center p-6 bg-orange-50 rounded-lg">
+                        <div class="text-2xl font-bold text-orange-600 mb-2">4.8/5</div>
+                        <div class="text-sm text-gray-600">Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accompagnement -->
+    <section id="accompagnement" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Accompagnement Personnalisé</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Un suivi complet avant, pendant et après la formation pour garantir votre réussite
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="space-y-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i data-feather="search" class="text-helloforma-blue"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Évaluation des Besoins</h3>
+                                <p class="text-gray-600">Audit complet de vos objectifs, contraintes et niveau actuel pour concevoir le parcours optimal.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i data-feather="user-check" class="text-helloforma-accent"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Parcours Personnalisés</h3>
+                                <p class="text-gray-600">Adaptation du contenu selon votre niveau, vos objectifs et votre rythme d'apprentissage préféré.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i data-feather="calendar" class="text-purple-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Suivi Post-Formation</h3>
+                                <p class="text-gray-600">Accompagnement de 3 à 6 mois après la formation pour consolider les acquis et répondre aux questions.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i data-feather="award" class="text-orange-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Certification</h3>
+                                <p class="text-gray-600">Validation officielle des compétences acquises avec des certifications reconnues par l'industrie.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left">
+                    <div class="bg-gradient-to-br from-helloforma-blue to-helloforma-dark rounded-2xl p-8 text-white">
+                        <h3 class="text-2xl font-bold mb-6">Votre Success Manager Dédié</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-3">
+                                <i data-feather="phone" class="w-5 h-5"></i>
+                                <span>Disponible par téléphone et email</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i data-feather="calendar" class="w-5 h-5"></i>
+                                <span>Points réguliers sur votre progression</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i data-feather="help-circle" class="w-5 h-5"></i>
+                                <span>Support technique et pédagogique</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i data-feather="trending-up" class="w-5 h-5"></i>
+                                <span>Conseils pour optimiser votre apprentissage</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 p-4 bg-white/20 rounded-lg">
+                            <div class="text-sm opacity-90 mb-2">Taux de satisfaction</div>
+                            <div class="text-3xl font-bold">98.5%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-helloforma-accent">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-white mb-6">Découvrez Notre Approche en Action</h2>
+            <p class="text-xl text-emerald-100 mb-8">
+                Réservez une démonstration personnalisée de nos méthodes et outils pédagogiques.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contact" class="px-8 py-4 bg-white text-helloforma-accent rounded-lg hover:bg-gray-100 transition font-medium">
+                    Demander une Démonstration
+                </a>
+                <a href="formations.html" class="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-helloforma-accent transition font-medium">
+                    Voir Nos Formations
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <svg class="graduation-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/>
+                        </svg>
+                        <span class="text-xl font-bold">HelloForma</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        Votre partenaire de confiance pour le développement des compétences professionnelles.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Méthodes</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#approches" class="hover:text-white transition">Approches Pédagogiques</a></li>
+                        <li><a href="#modalites" class="hover:text-white transition">Modalités</a></li>
+                        <li><a href="#outils" class="hover:text-white transition">Outils & Technologies</a></li>
+                        <li><a href="#accompagnement" class="hover:text-white transition">Accompagnement</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Entreprise</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition">Accueil</a></li>
+                        <li><a href="formations.html" class="hover:text-white transition">Formations</a></li>
+                        <li><a href="#" class="hover:text-white transition">À propos</a></li>
+                        <li><a href="#" class="hover:text-white transition">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>📧 contact@helloforma.fr</li>
+                        <li>📞 +33 1 23 45 67 89</li>
+                        <li>📍 123 Rue de la Formation<br>75001 Paris</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 HelloForma. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+        
+        // Initialize Feather Icons
+        feather.replace();
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
