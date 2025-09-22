@@ -74,6 +74,30 @@
         .nav-link:hover::after {
             width: 100%;
         }
+
+        /* Animation pour les cartes immobilières */
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        .immobilier-highlight {
+            position: relative;
+        }
+
+        .immobilier-highlight::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            background-size: 200% 100%;
+            animation: shimmer 3s infinite;
+            border-radius: 12px;
+            pointer-events: none;
+        }
     </style>
 </head>
 
@@ -455,13 +479,18 @@ nagement Section -->
             </div>
             
             <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div class="course-card bg-white rounded-xl p-8 shadow-lg border-2 border-emerald-200" data-aos="fade-up">
-                    <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
-                        <i data-feather="home" class="text-emerald-600"></i>
+                <div class="course-card immobilier-highlight bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-xl p-8 shadow-2xl border-3 border-emerald-400 relative overflow-hidden" data-aos="fade-up">
+                    <!-- Badge "Populaire" -->
+                    <div class="absolute top-4 right-4 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full animate-pulse">
+                        ⭐ POPULAIRE
+                    </div>
+                    
+                    <div class="w-12 h-12 bg-emerald-200 rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="home" class="text-emerald-700"></i>
                     </div>
                     <div class="mb-4">
-                        <span class="inline-block px-3 py-1 bg-emerald-100 text-emerald-800 text-sm font-medium rounded-full mb-2">
-                            Carte Professionnelle T
+                        <span class="inline-block px-4 py-2 bg-emerald-600 text-white text-sm font-bold rounded-full mb-2 shadow-lg">
+                            🏠 Carte Professionnelle T
                         </span>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Transaction Immobilière</h3>
@@ -482,19 +511,24 @@ nagement Section -->
                             <span class="text-helloforma-blue font-semibold text-lg">À partir de 2 400€</span>
                             <span class="text-sm text-gray-500">Financement CPF possible</span>
                         </div>
-                        <a href="#" class="w-full bg-emerald-600 text-white py-3 px-6 rounded-lg hover:bg-emerald-700 transition font-medium text-center block">
-                            Demander des Informations →
+                        <a href="#" class="w-full bg-gradient-to-r from-emerald-600 to-emerald-700 text-white py-4 px-6 rounded-lg hover:from-emerald-700 hover:to-emerald-800 transition font-bold text-center block shadow-lg transform hover:scale-105">
+                            🎯 Obtenir ma Carte T →
                         </a>
                     </div>
                 </div>
 
-                <div class="course-card bg-white rounded-xl p-8 shadow-lg border-2 border-blue-200" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                        <i data-feather="key" class="text-helloforma-blue"></i>
+                <div class="course-card immobilier-highlight bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8 shadow-2xl border-3 border-blue-400 relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <!-- Badge "Recommandé" -->
+                    <div class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full animate-pulse">
+                        🔑 RECOMMANDÉ
+                    </div>
+                    
+                    <div class="w-12 h-12 bg-blue-200 rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="key" class="text-blue-700"></i>
                     </div>
                     <div class="mb-4">
-                        <span class="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full mb-2">
-                            Carte Professionnelle G
+                        <span class="inline-block px-4 py-2 bg-blue-600 text-white text-sm font-bold rounded-full mb-2 shadow-lg">
+                            🔑 Carte Professionnelle G
                         </span>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Gestion Immobilière</h3>
@@ -515,8 +549,8 @@ nagement Section -->
                             <span class="text-helloforma-blue font-semibold text-lg">À partir de 2 200€</span>
                             <span class="text-sm text-gray-500">Financement CPF possible</span>
                         </div>
-                        <a href="#" class="w-full bg-helloforma-blue text-white py-3 px-6 rounded-lg hover:bg-helloforma-dark transition font-medium text-center block">
-                            Demander des Informations →
+                        <a href="#" class="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-4 px-6 rounded-lg hover:from-blue-700 hover:to-blue-800 transition font-bold text-center block shadow-lg transform hover:scale-105">
+                            🎯 Obtenir ma Carte G →
                         </a>
                     </div>
                 </div>
