@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="fr" style="scroll-behavior: smooth;">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nos Méthodes | HelloForma</title>
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
-    
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
+
     <!-- Feather Icons -->
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    
+
     <script>
         tailwind.config = {
             theme: {
@@ -35,7 +36,7 @@
             }
         }
     </script>
-    
+
     <style>
         .graduation-icon {
             width: 32px;
@@ -45,16 +46,16 @@
             padding: 6px;
             fill: white;
         }
-        
+
         .method-card {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
+
         .method-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
         }
-        
+
         .nav-link {
             position: relative;
             transition: color 0.3s ease;
@@ -70,7 +71,7 @@
             background-color: #2563EB;
             transition: width 0.3s ease;
         }
-        
+
         .nav-link:hover::after {
             width: 100%;
         }
@@ -103,20 +104,23 @@
             <div class="flex justify-between items-center h-16">
                 <a href="index.html" class="flex items-center space-x-2">
                     <svg class="graduation-icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/>
+                        <path
+                            d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z" />
                     </svg>
                     <span class="text-xl font-bold text-gray-900">HelloForma</span>
                 </a>
-                
+
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="formations.html" class="nav-link text-gray-700 hover:text-helloforma-blue">Formations</a>
                     <a href="methodes.html" class="nav-link text-helloforma-blue font-medium">Méthodes</a>
-                    <a href="index.html#certifications" class="nav-link text-gray-700 hover:text-helloforma-blue">Certifications</a>
-                    <a href="index.html#contact" class="px-6 py-2 bg-helloforma-blue text-white rounded-lg hover:bg-helloforma-dark transition font-medium">
+                    <a href="index.html#certifications"
+                        class="nav-link text-gray-700 hover:text-helloforma-blue">Certifications</a>
+                    <a href="index.html#contact"
+                        class="px-6 py-2 bg-helloforma-blue text-white rounded-lg hover:bg-helloforma-dark transition font-medium">
                         Nous Contacter
                     </a>
                 </div>
-                
+
                 <button class="md:hidden">
                     <i data-feather="menu"></i>
                 </button>
@@ -134,16 +138,20 @@
                 Une approche innovante et personnalisée pour garantir l'efficacité de vos formations
             </p>
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="#approches" class="px-6 py-3 bg-white text-helloforma-accent rounded-lg hover:bg-gray-100 transition font-medium">
+                <a href="#approches"
+                    class="px-6 py-3 bg-white text-helloforma-accent rounded-lg hover:bg-gray-100 transition font-medium">
                     Approches Pédagogiques
                 </a>
-                <a href="#modalites" class="px-6 py-3 bg-white/20 text-white rounded-lg hover:bg-white/30 transition font-medium">
+                <a href="#modalites"
+                    class="px-6 py-3 bg-white/20 text-white rounded-lg hover:bg-white/30 transition font-medium">
                     Modalités
                 </a>
-                <a href="#outils" class="px-6 py-3 bg-white/20 text-white rounded-lg hover:bg-white/30 transition font-medium">
+                <a href="#outils"
+                    class="px-6 py-3 bg-white/20 text-white rounded-lg hover:bg-white/30 transition font-medium">
                     Outils
                 </a>
-                <a href="#accompagnement" class="px-6 py-3 bg-white/20 text-white rounded-lg hover:bg-white/30 transition font-medium">
+                <a href="#accompagnement"
+                    class="px-6 py-3 bg-white/20 text-white rounded-lg hover:bg-white/30 transition font-medium">
                     Accompagnement
                 </a>
             </div>
@@ -159,10 +167,11 @@
                     Un parcours structuré en 5 étapes pour maximiser l'impact de votre formation
                 </p>
             </div>
-            
+
             <div class="grid md:grid-cols-5 gap-8">
                 <div class="process-step text-center" data-aos="fade-up">
-                    <div class="w-16 h-16 bg-helloforma-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div
+                        class="w-16 h-16 bg-helloforma-blue rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-white font-bold text-xl">1</span>
                     </div>
                     <h3 class="font-semibold text-gray-900 mb-2">Analyse des Besoins</h3>
@@ -170,7 +179,8 @@
                 </div>
 
                 <div class="process-step text-center" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-16 h-16 bg-helloforma-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div
+                        class="w-16 h-16 bg-helloforma-blue rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-white font-bold text-xl">2</span>
                     </div>
                     <h3 class="font-semibold text-gray-900 mb-2">Conception</h3>
@@ -178,7 +188,8 @@
                 </div>
 
                 <div class="process-step text-center" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-16 h-16 bg-helloforma-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div
+                        class="w-16 h-16 bg-helloforma-blue rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-white font-bold text-xl">3</span>
                     </div>
                     <h3 class="font-semibold text-gray-900 mb-2">Formation</h3>
@@ -186,7 +197,8 @@
                 </div>
 
                 <div class="process-step text-center" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-16 h-16 bg-helloforma-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div
+                        class="w-16 h-16 bg-helloforma-blue rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-white font-bold text-xl">4</span>
                     </div>
                     <h3 class="font-semibold text-gray-900 mb-2">Évaluation</h3>
@@ -194,7 +206,8 @@
                 </div>
 
                 <div class="process-step text-center" data-aos="fade-up" data-aos-delay="400">
-                    <div class="w-16 h-16 bg-helloforma-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div
+                        class="w-16 h-16 bg-helloforma-blue rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-white font-bold text-xl">5</span>
                     </div>
                     <h3 class="font-semibold text-gray-900 mb-2">Suivi</h3>
@@ -213,7 +226,7 @@
                     Des méthodes éprouvées pour un apprentissage efficace et durable
                 </p>
             </div>
-            
+
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="method-card bg-white rounded-xl p-8 shadow-lg" data-aos="fade-up">
                     <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
@@ -221,7 +234,8 @@
                     </div>
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Blended Learning</h3>
                     <p class="text-gray-600 mb-4">
-                        Combinaison optimale entre présentiel et distanciel pour s'adapter à tous les profils d'apprentissage.
+                        Combinaison optimale entre présentiel et distanciel pour s'adapter à tous les profils
+                        d'apprentissage.
                     </p>
                     <ul class="text-sm text-gray-500 space-y-2">
                         <li>• Flexibilité maximale</li>
@@ -236,7 +250,8 @@
                     </div>
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Microlearning</h3>
                     <p class="text-gray-600 mb-4">
-                        Modules courts et ciblés de 5-15 minutes pour une assimilation optimale et une intégration facile.
+                        Modules courts et ciblés de 5-15 minutes pour une assimilation optimale et une intégration
+                        facile.
                     </p>
                     <ul class="text-sm text-gray-500 space-y-2">
                         <li>• Concentration maximale</li>
@@ -296,7 +311,8 @@
                     </div>
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Adaptive Learning</h3>
                     <p class="text-gray-600 mb-4">
-                        Parcours personnalisés qui s'adaptent automatiquement au niveau et au rythme de chaque apprenant.
+                        Parcours personnalisés qui s'adaptent automatiquement au niveau et au rythme de chaque
+                        apprenant.
                     </p>
                     <ul class="text-sm text-gray-500 space-y-2">
                         <li>• Personnalisation IA</li>
@@ -306,8 +322,8 @@
                 </div>
             </div>
         </div>
-    </section>    
-<!-- Modalités de Formation -->
+    </section>
+    <!-- Modalités de Formation -->
     <section id="modalites" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -316,9 +332,10 @@
                     Choisissez le format qui correspond le mieux à vos contraintes et préférences
                 </p>
             </div>
-            
+
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="method-card bg-white rounded-xl p-8 shadow-lg border-2 border-helloforma-blue" data-aos="fade-up">
+                <div class="method-card bg-white rounded-xl p-8 shadow-lg border-2 border-helloforma-blue"
+                    data-aos="fade-up">
                     <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
                         <i data-feather="users" class="text-helloforma-blue"></i>
                     </div>
@@ -342,7 +359,8 @@
                     </div>
                 </div>
 
-                <div class="method-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up" data-aos-delay="100">
+                <div class="method-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up"
+                    data-aos-delay="100">
                     <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
                         <i data-feather="video" class="text-helloforma-accent"></i>
                     </div>
@@ -366,7 +384,8 @@
                     </div>
                 </div>
 
-                <div class="method-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up" data-aos-delay="200">
+                <div class="method-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up"
+                    data-aos-delay="200">
                     <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                         <i data-feather="play-circle" class="text-purple-600"></i>
                     </div>
@@ -390,7 +409,8 @@
                     </div>
                 </div>
 
-                <div class="method-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up" data-aos-delay="300">
+                <div class="method-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up"
+                    data-aos-delay="300">
                     <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
                         <i data-feather="user" class="text-orange-600"></i>
                     </div>
@@ -414,7 +434,8 @@
                     </div>
                 </div>
 
-                <div class="method-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up" data-aos-delay="400">
+                <div class="method-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up"
+                    data-aos-delay="400">
                     <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
                         <i data-feather="settings" class="text-red-600"></i>
                     </div>
@@ -438,7 +459,8 @@
                     </div>
                 </div>
 
-                <div class="method-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up" data-aos-delay="500">
+                <div class="method-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up"
+                    data-aos-delay="500">
                     <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
                         <i data-feather="briefcase" class="text-teal-600"></i>
                     </div>
@@ -474,29 +496,20 @@
                     Une plateforme technologique de pointe pour une expérience d'apprentissage optimale
                 </p>
             </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="text-center" data-aos="fade-up">
                     <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-6">
                         <i data-feather="monitor" class="text-helloforma-blue"></i>
                     </div>
                     <h3 class="text-lg font-semibold text-gray-900 mb-4">Plateforme LMS</h3>
                     <p class="text-gray-600 text-sm">
-                        Interface moderne et intuitive pour gérer vos parcours, suivre vos progrès et accéder aux ressources.
+                        Interface moderne et intuitive pour gérer vos parcours, suivre vos progrès et accéder aux
+                        ressources.
                     </p>
                 </div>
 
                 <div class="text-center" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-6">
-                        <i data-feather="headphones" class="text-helloforma-accent"></i>
-                    </div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Réalité Virtuelle</h3>
-                    <p class="text-gray-600 text-sm">
-                        Immersion totale pour certaines formations techniques avec des environnements 3D réalistes.
-                    </p>
-                </div>
-
-                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
                     <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-6">
                         <i data-feather="activity" class="text-purple-600"></i>
                     </div>
@@ -506,7 +519,7 @@
                     </p>
                 </div>
 
-                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
                     <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mx-auto mb-6">
                         <i data-feather="share-2" class="text-orange-600"></i>
                     </div>
@@ -523,7 +536,7 @@
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">Tableau de Bord Intelligent</h3>
                     <p class="text-gray-600">Suivez vos progrès en temps réel avec des analytics détaillés</p>
                 </div>
-                
+
                 <div class="grid md:grid-cols-4 gap-6">
                     <div class="text-center p-6 bg-blue-50 rounded-lg">
                         <div class="text-2xl font-bold text-helloforma-blue mb-2">87%</div>
@@ -555,47 +568,55 @@
                     Un suivi complet avant, pendant et après la formation pour garantir votre réussite
                 </p>
             </div>
-            
+
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div data-aos="fade-right">
                     <div class="space-y-8">
                         <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <div
+                                class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
                                 <i data-feather="search" class="text-helloforma-blue"></i>
                             </div>
                             <div>
                                 <h3 class="text-lg font-semibold text-gray-900 mb-2">Évaluation des Besoins</h3>
-                                <p class="text-gray-600">Audit complet de vos objectifs, contraintes et niveau actuel pour concevoir le parcours optimal.</p>
+                                <p class="text-gray-600">Audit complet de vos objectifs, contraintes et niveau actuel
+                                    pour concevoir le parcours optimal.</p>
                             </div>
                         </div>
 
                         <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <div
+                                class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
                                 <i data-feather="user-check" class="text-helloforma-accent"></i>
                             </div>
                             <div>
                                 <h3 class="text-lg font-semibold text-gray-900 mb-2">Parcours Personnalisés</h3>
-                                <p class="text-gray-600">Adaptation du contenu selon votre niveau, vos objectifs et votre rythme d'apprentissage préféré.</p>
+                                <p class="text-gray-600">Adaptation du contenu selon votre niveau, vos objectifs et
+                                    votre rythme d'apprentissage préféré.</p>
                             </div>
                         </div>
 
                         <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <div
+                                class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
                                 <i data-feather="calendar" class="text-purple-600"></i>
                             </div>
                             <div>
                                 <h3 class="text-lg font-semibold text-gray-900 mb-2">Suivi Post-Formation</h3>
-                                <p class="text-gray-600">Accompagnement de 3 à 6 mois après la formation pour consolider les acquis et répondre aux questions.</p>
+                                <p class="text-gray-600">Accompagnement de 3 à 6 mois après la formation pour consolider
+                                    les acquis et répondre aux questions.</p>
                             </div>
                         </div>
 
                         <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <div
+                                class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
                                 <i data-feather="award" class="text-orange-600"></i>
                             </div>
                             <div>
                                 <h3 class="text-lg font-semibold text-gray-900 mb-2">Certification</h3>
-                                <p class="text-gray-600">Validation officielle des compétences acquises avec des certifications reconnues par l'industrie.</p>
+                                <p class="text-gray-600">Validation officielle des compétences acquises avec des
+                                    certifications reconnues par l'industrie.</p>
                             </div>
                         </div>
                     </div>
@@ -622,7 +643,7 @@
                                 <span>Conseils pour optimiser votre apprentissage</span>
                             </div>
                         </div>
-                        
+
                         <div class="mt-8 p-4 bg-white/20 rounded-lg">
                             <div class="text-sm opacity-90 mb-2">Taux de satisfaction</div>
                             <div class="text-3xl font-bold">98.5%</div>
@@ -641,10 +662,12 @@
                 Réservez une démonstration personnalisée de nos méthodes et outils pédagogiques.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#contact" class="px-8 py-4 bg-white text-helloforma-accent rounded-lg hover:bg-gray-100 transition font-medium">
+                <a href="#contact"
+                    class="px-8 py-4 bg-white text-helloforma-accent rounded-lg hover:bg-gray-100 transition font-medium">
                     Demander une Démonstration
                 </a>
-                <a href="formations.html" class="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-helloforma-accent transition font-medium">
+                <a href="formations.html"
+                    class="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-helloforma-accent transition font-medium">
                     Voir Nos Formations
                 </a>
             </div>
@@ -658,7 +681,8 @@
                 <div>
                     <div class="flex items-center space-x-2 mb-6">
                         <svg class="graduation-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/>
+                            <path
+                                d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z" />
                         </svg>
                         <span class="text-xl font-bold">HelloForma</span>
                     </div>
@@ -666,7 +690,7 @@
                         Votre partenaire de confiance pour le développement des compétences professionnelles.
                     </p>
                 </div>
-                
+
                 <div>
                     <h4 class="font-semibold mb-4">Méthodes</h4>
                     <ul class="space-y-2 text-gray-400">
@@ -676,7 +700,7 @@
                         <li><a href="#accompagnement" class="hover:text-white transition">Accompagnement</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h4 class="font-semibold mb-4">Entreprise</h4>
                     <ul class="space-y-2 text-gray-400">
@@ -686,7 +710,7 @@
                         <li><a href="#" class="hover:text-white transition">Blog</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h4 class="font-semibold mb-4">Contact</h4>
                     <ul class="space-y-2 text-gray-400">
@@ -696,7 +720,7 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
                 <p>&copy; 2024 HelloForma. Tous droits réservés.</p>
             </div>
@@ -709,10 +733,10 @@
             duration: 800,
             once: true
         });
-        
+
         // Initialize Feather Icons
         feather.replace();
-        
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -728,4 +752,5 @@
         });
     </script>
 </body>
+
 </html>
