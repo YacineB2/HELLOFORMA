@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="fr" style="scroll-behavior: smooth;">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nos Formations | HelloForma</title>
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
-    
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
+
     <!-- Feather Icons -->
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    
+
     <script>
         tailwind.config = {
             theme: {
@@ -35,7 +36,7 @@
             }
         }
     </script>
-    
+
     <style>
         .graduation-icon {
             width: 32px;
@@ -45,16 +46,16 @@
             padding: 6px;
             fill: white;
         }
-        
+
         .course-card {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
+
         .course-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
         }
-        
+
         .nav-link {
             position: relative;
             transition: color 0.3s ease;
@@ -70,15 +71,20 @@
             background-color: #2563EB;
             transition: width 0.3s ease;
         }
-        
+
         .nav-link:hover::after {
             width: 100%;
         }
 
         /* Animation pour les cartes immobilières */
         @keyframes shimmer {
-            0% { background-position: -200% 0; }
-            100% { background-position: 200% 0; }
+            0% {
+                background-position: -200% 0;
+            }
+
+            100% {
+                background-position: 200% 0;
+            }
         }
 
         .immobilier-highlight {
@@ -92,7 +98,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
             background-size: 200% 100%;
             animation: shimmer 3s infinite;
             border-radius: 12px;
@@ -108,20 +114,23 @@
             <div class="flex justify-between items-center h-16">
                 <a href="index.html" class="flex items-center space-x-2">
                     <svg class="graduation-icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/>
+                        <path
+                            d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z" />
                     </svg>
                     <span class="text-xl font-bold text-gray-900">HelloForma</span>
                 </a>
-                
+
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="formations.html" class="nav-link text-helloforma-blue font-medium">Formations</a>
                     <a href="methodes.html" class="nav-link text-gray-700 hover:text-helloforma-blue">Méthodes</a>
-                    <a href="index.html#certifications" class="nav-link text-gray-700 hover:text-helloforma-blue">Certifications</a>
-                    <a href="index.html#contact" class="px-6 py-2 bg-helloforma-blue text-white rounded-lg hover:bg-helloforma-dark transition font-medium">
+                    <a href="index.html#certifications"
+                        class="nav-link text-gray-700 hover:text-helloforma-blue">Certifications</a>
+                    <a href="index.html#contact"
+                        class="px-6 py-2 bg-helloforma-blue text-white rounded-lg hover:bg-helloforma-dark transition font-medium">
                         Nous Contacter
                     </a>
                 </div>
-                
+
                 <button class="md:hidden">
                     <i data-feather="menu"></i>
                 </button>
@@ -136,23 +145,33 @@
                 Catalogue de Formations
             </h1>
             <p class="text-xl text-blue-100 mb-8">
-                Développez vos compétences avec nos formations professionnelles adaptées aux enjeux actuels des entreprises
+                Développez vos compétences avec nos formations professionnelles adaptées aux enjeux actuels des
+                entreprises
             </p>
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="#digital" class="px-6 py-3 bg-white text-helloforma-blue rounded-lg hover:bg-gray-100 transition font-medium">
+                <a href="#digital"
+                    class="px-6 py-3 bg-white text-helloforma-blue rounded-lg hover:bg-gray-100 transition font-medium">
                     Digital & Tech
                 </a>
-                <a href="#management" class="px-6 py-3 bg-white/20 text-white rounded-lg hover:bg-white/30 transition font-medium">
+                <a href="#management"
+                    class="px-6 py-3 bg-white/20 text-white rounded-lg hover:bg-white/30 transition font-medium">
                     Management
                 </a>
-                <a href="#marketing" class="px-6 py-3 bg-white/20 text-white rounded-lg hover:bg-white/30 transition font-medium">
+                <a href="#marketing"
+                    class="px-6 py-3 bg-white/20 text-white rounded-lg hover:bg-white/30 transition font-medium">
                     Marketing
                 </a>
-                <a href="#finance" class="px-6 py-3 bg-white/20 text-white rounded-lg hover:bg-white/30 transition font-medium">
+                <a href="#finance"
+                    class="px-6 py-3 bg-white/20 text-white rounded-lg hover:bg-white/30 transition font-medium">
                     Finance
                 </a>
-                <a href="#immobilier" class="px-6 py-3 bg-white/20 text-white rounded-lg hover:bg-white/30 transition font-medium">
+                <a href="#immobilier"
+                    class="px-6 py-3 bg-white/20 text-white rounded-lg hover:bg-white/30 transition font-medium">
                     Immobilier
+                </a>
+                <a href="#securite"
+                    class="px-6 py-3 bg-white/20 text-white rounded-lg hover:bg-white/30 transition font-medium">
+                    Sécurité
                 </a>
             </div>
         </div>
@@ -167,7 +186,7 @@
                     Maîtrisez les technologies de demain et restez compétitif dans l'économie numérique
                 </p>
             </div>
-            
+
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="course-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up">
                     <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
@@ -182,11 +201,13 @@
                     </ul>
                     <div class="flex items-center justify-between">
                         <span class="text-helloforma-blue font-semibold">À partir de 500€</span>
-                        <a href="#" onclick="openModal('dev-web')" class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                        <a href="#" onclick="openModal('dev-web')"
+                            class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
                     </div>
                 </div>
 
-                <div class="course-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up" data-aos-delay="100">
+                <div class="course-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up"
+                    data-aos-delay="100">
                     <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
                         <i data-feather="smartphone" class="text-helloforma-accent"></i>
                     </div>
@@ -199,11 +220,13 @@
                     </ul>
                     <div class="flex items-center justify-between">
                         <span class="text-helloforma-blue font-semibold">À partir de 500€</span>
-                        <a href="#" onclick="openModal('dev-mobile')" class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                        <a href="#" onclick="openModal('dev-mobile')"
+                            class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
                     </div>
                 </div>
 
-                <div class="course-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up" data-aos-delay="200">
+                <div class="course-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up"
+                    data-aos-delay="200">
                     <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                         <i data-feather="bar-chart" class="text-purple-600"></i>
                     </div>
@@ -216,11 +239,13 @@
                     </ul>
                     <div class="flex items-center justify-between">
                         <span class="text-helloforma-blue font-semibold">À partir de 500€</span>
-                        <a href="#" onclick="openModal('data-science')" class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                        <a href="#" onclick="openModal('data-science')"
+                            class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
                     </div>
                 </div>
 
-                <div class="course-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up" data-aos-delay="300">
+                <div class="course-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up"
+                    data-aos-delay="300">
                     <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
                         <i data-feather="shield" class="text-red-600"></i>
                     </div>
@@ -233,11 +258,13 @@
                     </ul>
                     <div class="flex items-center justify-between">
                         <span class="text-helloforma-blue font-semibold">À partir de 500€</span>
-                        <a href="#" onclick="openModal('cybersecurite')" class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                        <a href="#" onclick="openModal('cybersecurite')"
+                            class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
                     </div>
                 </div>
 
-                <div class="course-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up" data-aos-delay="400">
+                <div class="course-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up"
+                    data-aos-delay="400">
                     <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
                         <i data-feather="cpu" class="text-indigo-600"></i>
                     </div>
@@ -250,11 +277,13 @@
                     </ul>
                     <div class="flex items-center justify-between">
                         <span class="text-helloforma-blue font-semibold">À partir de 500€</span>
-                        <a href="#" class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                        <a href="#" onclick="openModal('intelligence-artificielle')"
+                            class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
                     </div>
                 </div>
 
-                <div class="course-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up" data-aos-delay="500">
+                <div class="course-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up"
+                    data-aos-delay="500">
                     <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
                         <i data-feather="cloud" class="text-yellow-600"></i>
                     </div>
@@ -267,13 +296,15 @@
                     </ul>
                     <div class="flex items-center justify-between">
                         <span class="text-helloforma-blue font-semibold">À partir de 500€</span>
-                        <a href="#" class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                        <a href="#" onclick="openModal('cloud-computing')"
+                            class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>    <!-- Ma
-nagement Section -->
+    </section>
+
+    <!-- Management Section -->
     <section id="management" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -282,7 +313,7 @@ nagement Section -->
                     Développez vos compétences managériales et devenez un leader inspirant
                 </p>
             </div>
-            
+
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="course-card bg-white rounded-xl p-8 shadow-lg" data-aos="fade-up">
                     <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
@@ -297,7 +328,8 @@ nagement Section -->
                     </ul>
                     <div class="flex items-center justify-between">
                         <span class="text-helloforma-blue font-semibold">À partir de 500€</span>
-                        <a href="#" onclick="openModal('management')" class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                        <a href="#" onclick="openModal('management')"
+                            class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
                     </div>
                 </div>
 
@@ -314,7 +346,8 @@ nagement Section -->
                     </ul>
                     <div class="flex items-center justify-between">
                         <span class="text-helloforma-blue font-semibold">À partir de 500€</span>
-                        <a href="#" class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                        <a href="#" onclick="openModal('gestion-projet')"
+                            class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
                     </div>
                 </div>
 
@@ -331,7 +364,8 @@ nagement Section -->
                     </ul>
                     <div class="flex items-center justify-between">
                         <span class="text-helloforma-blue font-semibold">À partir de 500€</span>
-                        <a href="#" class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                        <a href="#" onclick="openModal('communication')"
+                            class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
                     </div>
                 </div>
             </div>
@@ -347,7 +381,7 @@ nagement Section -->
                     Maîtrisez les stratégies marketing modernes et boostez vos ventes
                 </p>
             </div>
-            
+
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="course-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up">
                     <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-6">
@@ -362,11 +396,13 @@ nagement Section -->
                     </ul>
                     <div class="flex items-center justify-between">
                         <span class="text-helloforma-blue font-semibold">À partir de 500€</span>
-                        <a href="#" class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                        <a href="#" onclick="openModal('marketing-digital')"
+                            class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
                     </div>
                 </div>
 
-                <div class="course-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up" data-aos-delay="100">
+                <div class="course-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up"
+                    data-aos-delay="100">
                     <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
                         <i data-feather="shopping-cart" class="text-orange-600"></i>
                     </div>
@@ -379,11 +415,13 @@ nagement Section -->
                     </ul>
                     <div class="flex items-center justify-between">
                         <span class="text-helloforma-blue font-semibold">À partir de 500€</span>
-                        <a href="#" class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                        <a href="#" onclick="openModal('ecommerce')"
+                            class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
                     </div>
                 </div>
 
-                <div class="course-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up" data-aos-delay="200">
+                <div class="course-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up"
+                    data-aos-delay="200">
                     <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
                         <i data-feather="phone" class="text-teal-600"></i>
                     </div>
@@ -396,7 +434,8 @@ nagement Section -->
                     </ul>
                     <div class="flex items-center justify-between">
                         <span class="text-helloforma-blue font-semibold">À partir de 500€</span>
-                        <a href="#" class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                        <a href="#" onclick="openModal('techniques-vente')"
+                            class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
                     </div>
                 </div>
             </div>
@@ -412,7 +451,7 @@ nagement Section -->
                     Maîtrisez les aspects financiers et comptables de votre entreprise
                 </p>
             </div>
-            
+
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="course-card bg-white rounded-xl p-8 shadow-lg" data-aos="fade-up">
                     <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
@@ -427,7 +466,8 @@ nagement Section -->
                     </ul>
                     <div class="flex items-center justify-between">
                         <span class="text-helloforma-blue font-semibold">À partir de 500€</span>
-                        <a href="#" class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                        <a href="#" onclick="openModal('comptabilite')"
+                            class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
                     </div>
                 </div>
 
@@ -444,7 +484,8 @@ nagement Section -->
                     </ul>
                     <div class="flex items-center justify-between">
                         <span class="text-helloforma-blue font-semibold">À partir de 500€</span>
-                        <a href="#" class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                        <a href="#" onclick="openModal('controle-gestion')"
+                            class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
                     </div>
                 </div>
 
@@ -461,7 +502,79 @@ nagement Section -->
                     </ul>
                     <div class="flex items-center justify-between">
                         <span class="text-helloforma-blue font-semibold">À partir de 500€</span>
-                        <a href="#" class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                        <a href="#" onclick="openModal('fiscalite')"
+                            class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sécurité Section -->
+    <section id="securite" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Hygiène & Sécurité</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Formations essentielles pour garantir la sécurité et l'hygiène dans votre environnement
+                    professionnel
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="course-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up">
+                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="heart" class="text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Sauveteur Secouriste du Travail (SST)</h3>
+                    <p class="text-gray-600 mb-4">Formation aux premiers secours en entreprise, gestes qui sauvent</p>
+                    <ul class="text-sm text-gray-500 mb-6 space-y-1">
+                        <li>• 14h de formation</li>
+                        <li>• Certification SST</li>
+                        <li>• Pratique intensive</li>
+                    </ul>
+                    <div class="flex items-center justify-between">
+                        <span class="text-helloforma-blue font-semibold">À partir de 500€</span>
+                        <a href="#" onclick="openModal('sst')"
+                            class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                    </div>
+                </div>
+
+                <div class="course-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="coffee" class="text-orange-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Hygiène Restaurant & Hôtel</h3>
+                    <p class="text-gray-600 mb-4">HACCP, normes sanitaires, manipulation des denrées alimentaires</p>
+                    <ul class="text-sm text-gray-500 mb-6 space-y-1">
+                        <li>• 14h de formation</li>
+                        <li>• Certification HACCP</li>
+                        <li>• Conformité réglementaire</li>
+                    </ul>
+                    <div class="flex items-center justify-between">
+                        <span class="text-helloforma-blue font-semibold">À partir de 500€</span>
+                        <a href="#" onclick="openModal('hygiene-resto')"
+                            class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                    </div>
+                </div>
+
+                <div class="course-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="alert-triangle" class="text-yellow-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Hygiène & Sécurité en Entreprise</h3>
+                    <p class="text-gray-600 mb-4">Prévention des risques, document unique, sécurité au travail</p>
+                    <ul class="text-sm text-gray-500 mb-6 space-y-1">
+                        <li>• 21h de formation</li>
+                        <li>• Document unique</li>
+                        <li>• Évaluation des risques</li>
+                    </ul>
+                    <div class="flex items-center justify-between">
+                        <span class="text-helloforma-blue font-semibold">À partir de 500€</span>
+                        <a href="#" onclick="openModal('hygiene-entreprise')"
+                            class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
                     </div>
                 </div>
             </div>
@@ -477,25 +590,29 @@ nagement Section -->
                     Obtenez vos cartes professionnelles et maîtrisez les aspects juridiques et pratiques de l'immobilier
                 </p>
             </div>
-            
+
             <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div class="course-card immobilier-highlight bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-xl p-8 shadow-2xl border-3 border-emerald-400 relative overflow-hidden" data-aos="fade-up">
+                <div class="course-card immobilier-highlight bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-xl p-8 shadow-2xl border-3 border-emerald-400 relative overflow-hidden"
+                    data-aos="fade-up">
                     <!-- Badge "Populaire" -->
-                    <div class="absolute top-4 right-4 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full animate-pulse">
+                    <div
+                        class="absolute top-4 right-4 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full animate-pulse">
                         ⭐ POPULAIRE
                     </div>
-                    
+
                     <div class="w-12 h-12 bg-emerald-200 rounded-lg flex items-center justify-center mb-6">
                         <i data-feather="home" class="text-emerald-700"></i>
                     </div>
                     <div class="mb-4">
-                        <span class="inline-block px-4 py-2 bg-emerald-600 text-white text-sm font-bold rounded-full mb-2 shadow-lg">
+                        <span
+                            class="inline-block px-4 py-2 bg-emerald-600 text-white text-sm font-bold rounded-full mb-2 shadow-lg">
                             🏠 Carte Professionnelle T
                         </span>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Transaction Immobilière</h3>
                     <p class="text-gray-600 mb-6">
-                        Formation complète pour obtenir la carte T et exercer les activités de transaction immobilière : vente, achat, négociation et intermédiation.
+                        Formation complète pour obtenir la carte T et exercer les activités de transaction immobilière :
+                        vente, achat, négociation et intermédiation.
                     </p>
                     <ul class="text-sm text-gray-500 mb-6 space-y-2">
                         <li>• <strong>150h de formation</strong> (42h minimum réglementaires)</li>
@@ -511,29 +628,34 @@ nagement Section -->
                             <span class="text-helloforma-blue font-semibold text-lg">À partir de 500€</span>
                             <span class="text-sm text-gray-500">Remboursement OPCO</span>
                         </div>
-                        <a href="#" class="w-full bg-gradient-to-r from-emerald-600 to-emerald-700 text-white py-4 px-6 rounded-lg hover:from-emerald-700 hover:to-emerald-800 transition font-bold text-center block shadow-lg transform hover:scale-105">
+                        <a href="#"
+                            class="w-full bg-gradient-to-r from-emerald-600 to-emerald-700 text-white py-4 px-6 rounded-lg hover:from-emerald-700 hover:to-emerald-800 transition font-bold text-center block shadow-lg transform hover:scale-105">
                             🎯 Obtenir ma Carte T →
                         </a>
                     </div>
                 </div>
 
-                <div class="course-card immobilier-highlight bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8 shadow-2xl border-3 border-blue-400 relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                <div class="course-card immobilier-highlight bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8 shadow-2xl border-3 border-blue-400 relative overflow-hidden"
+                    data-aos="fade-up" data-aos-delay="100">
                     <!-- Badge "Recommandé" -->
-                    <div class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full animate-pulse">
+                    <div
+                        class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full animate-pulse">
                         🔑 RECOMMANDÉ
                     </div>
-                    
+
                     <div class="w-12 h-12 bg-blue-200 rounded-lg flex items-center justify-center mb-6">
                         <i data-feather="key" class="text-blue-700"></i>
                     </div>
                     <div class="mb-4">
-                        <span class="inline-block px-4 py-2 bg-blue-600 text-white text-sm font-bold rounded-full mb-2 shadow-lg">
+                        <span
+                            class="inline-block px-4 py-2 bg-blue-600 text-white text-sm font-bold rounded-full mb-2 shadow-lg">
                             🔑 Carte Professionnelle G
                         </span>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Gestion Immobilière</h3>
                     <p class="text-gray-600 mb-6">
-                        Formation spécialisée pour obtenir la carte G et exercer les activités de gestion locative, administration de biens et syndic de copropriété.
+                        Formation spécialisée pour obtenir la carte G et exercer les activités de gestion locative,
+                        administration de biens et syndic de copropriété.
                     </p>
                     <ul class="text-sm text-gray-500 mb-6 space-y-2">
                         <li>• <strong>120h de formation</strong> (42h minimum réglementaires)</li>
@@ -549,7 +671,8 @@ nagement Section -->
                             <span class="text-helloforma-blue font-semibold text-lg">À partir de 500€</span>
                             <span class="text-sm text-gray-500">Remboursement OPCO</span>
                         </div>
-                        <a href="#" class="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-4 px-6 rounded-lg hover:from-blue-700 hover:to-blue-800 transition font-bold text-center block shadow-lg transform hover:scale-105">
+                        <a href="#"
+                            class="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-4 px-6 rounded-lg hover:from-blue-700 hover:to-blue-800 transition font-bold text-center block shadow-lg transform hover:scale-105">
                             🎯 Obtenir ma Carte G →
                         </a>
                     </div>
@@ -559,12 +682,14 @@ nagement Section -->
             <!-- Additional Info Section -->
             <div class="mt-16 bg-gradient-to-r from-emerald-50 to-blue-50 rounded-2xl p-8">
                 <div class="text-center mb-8">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Pourquoi Choisir Nos Formations Immobilières ?</h3>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Pourquoi Choisir Nos Formations Immobilières ?
+                    </h3>
                     <p class="text-gray-600 max-w-2xl mx-auto">
-                        Nos formations sont conçues par des professionnels de l'immobilier et respectent scrupuleusement la réglementation en vigueur.
+                        Nos formations sont conçues par des professionnels de l'immobilier et respectent scrupuleusement
+                        la réglementation en vigueur.
                     </p>
                 </div>
-                
+
                 <div class="grid md:grid-cols-4 gap-6">
                     <div class="text-center">
                         <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -573,7 +698,7 @@ nagement Section -->
                         <h4 class="font-semibold text-gray-900 mb-2">Conformité Réglementaire</h4>
                         <p class="text-sm text-gray-600">Programmes conformes aux exigences préfectorales</p>
                     </div>
-                    
+
                     <div class="text-center">
                         <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
                             <i data-feather="users" class="text-helloforma-blue"></i>
@@ -581,7 +706,7 @@ nagement Section -->
                         <h4 class="font-semibold text-gray-900 mb-2">Formateurs Experts</h4>
                         <p class="text-sm text-gray-600">Professionnels en activité dans l'immobilier</p>
                     </div>
-                    
+
                     <div class="text-center">
                         <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
                             <i data-feather="book-open" class="text-purple-600"></i>
@@ -589,7 +714,7 @@ nagement Section -->
                         <h4 class="font-semibold text-gray-900 mb-2">Support Complet</h4>
                         <p class="text-sm text-gray-600">Accompagnement jusqu'à l'obtention de la carte</p>
                     </div>
-                    
+
                     <div class="text-center">
                         <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-4">
                             <i data-feather="award" class="text-orange-600"></i>
@@ -610,10 +735,12 @@ nagement Section -->
                 Nos experts conçoivent des programmes adaptés à vos besoins spécifiques et à votre secteur d'activité.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#contact" class="px-8 py-4 bg-white text-helloforma-blue rounded-lg hover:bg-gray-100 transition font-medium">
+                <a href="#contact"
+                    class="px-8 py-4 bg-white text-helloforma-blue rounded-lg hover:bg-gray-100 transition font-medium">
                     Demander un Devis Personnalisé
                 </a>
-                <a href="tel:+33123456789" class="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-helloforma-blue transition font-medium">
+                <a href="tel:0177627716"
+                    class="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-helloforma-blue transition font-medium">
                     Parler à un Conseiller
                 </a>
             </div>
@@ -627,7 +754,8 @@ nagement Section -->
                 <div>
                     <div class="flex items-center space-x-2 mb-6">
                         <svg class="graduation-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/>
+                            <path
+                                d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z" />
                         </svg>
                         <span class="text-xl font-bold">HelloForma</span>
                     </div>
@@ -635,7 +763,7 @@ nagement Section -->
                         Votre partenaire de confiance pour le développement des compétences professionnelles.
                     </p>
                 </div>
-                
+
                 <div>
                     <h4 class="font-semibold mb-4">Formations</h4>
                     <ul class="space-y-2 text-gray-400">
@@ -643,10 +771,11 @@ nagement Section -->
                         <li><a href="#management" class="hover:text-white transition">Management</a></li>
                         <li><a href="#marketing" class="hover:text-white transition">Marketing</a></li>
                         <li><a href="#finance" class="hover:text-white transition">Finance</a></li>
+                        <li><a href="#securite" class="hover:text-white transition">Sécurité</a></li>
                         <li><a href="#immobilier" class="hover:text-white transition">Immobilier</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h4 class="font-semibold mb-4">Entreprise</h4>
                     <ul class="space-y-2 text-gray-400">
@@ -656,17 +785,23 @@ nagement Section -->
                         <li><a href="#" class="hover:text-white transition">Blog</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h4 class="font-semibold mb-4">Contact</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li>📧 contact@helloforma.fr</li>
-                        <li>📞 +33 1 23 45 67 89</li>
-                        <li>📍 123 Rue de la Formation<br>75001 Paris</li>
+                        <li>📧 contact@helloforma.org</li>
+                        <li>📞 01 77 62 77 16</li>
+                        <li>📱 07 57 93 34 79</li>
+                        <li>📍 21 Place de la République<br>75003 Paris</li>
+                    </ul>
+                    <ul class="space-y-1 text-gray-500 text-xs mt-4">
+                        <li>SIRET: 90832988100019</li>
+                        <li>NDA: 11 75 64978 75</li>
+                        <li>Qualiopi N° 2405 OF Ind 0</li>
                     </ul>
                 </div>
             </div>
-            
+
             <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
                 <p>&copy; 2024 HelloForma. Tous droits réservés.</p>
             </div>
@@ -674,8 +809,10 @@ nagement Section -->
     </footer>
 
     <!-- Modal pour les détails des formations -->
-    <div id="formationModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto transform transition-all duration-300 scale-95 opacity-0" id="modalContent">
+    <div id="formationModal"
+        class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto transform transition-all duration-300 scale-95 opacity-0"
+            id="modalContent">
             <div class="p-8">
                 <div class="flex justify-between items-start mb-6">
                     <div>
@@ -686,7 +823,7 @@ nagement Section -->
                         <i data-feather="x" class="w-8 h-8"></i>
                     </button>
                 </div>
-                
+
                 <div class="grid md:grid-cols-3 gap-6 mb-8">
                     <div class="bg-blue-50 rounded-lg p-4 text-center">
                         <div class="text-2xl font-bold text-helloforma-blue mb-1" id="modalDuration"></div>
@@ -723,10 +860,12 @@ nagement Section -->
                         <div class="text-sm text-gray-500">Remboursement OPCO</div>
                     </div>
                     <div class="flex gap-3">
-                        <button onclick="closeModal()" class="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition">
+                        <button onclick="closeModal()"
+                            class="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition">
                             Fermer
                         </button>
-                        <button class="px-8 py-3 bg-helloforma-blue text-white rounded-lg hover:bg-helloforma-dark transition font-medium">
+                        <button
+                            class="px-8 py-3 bg-helloforma-blue text-white rounded-lg hover:bg-helloforma-dark transition font-medium">
                             S'inscrire maintenant
                         </button>
                     </div>
@@ -832,6 +971,277 @@ nagement Section -->
                     'Management à distance et hybride'
                 ],
                 prerequisites: 'Expérience professionnelle souhaitée. Aucun prérequis technique.'
+            },
+            'sst': {
+                title: 'Sauveteur Secouriste du Travail (SST)',
+                category: 'Hygiène & Sécurité',
+                duration: '14h',
+                level: 'Tous niveaux',
+                certification: 'SST',
+                description: 'Devenez acteur de la prévention dans votre entreprise. Cette formation vous permet d\'acquérir les compétences nécessaires pour porter secours à toute personne victime d\'un accident ou d\'un malaise sur le lieu de travail, en attendant l\'arrivée des secours spécialisés.',
+                program: [
+                    'Situer le cadre juridique de son intervention',
+                    'Protéger, examiner et faire alerter',
+                    'Secourir : gestes de premiers secours',
+                    'Réanimation cardio-pulmonaire (RCP)',
+                    'Utilisation du défibrillateur automatisé externe (DAE)',
+                    'Hémorragies et plaies graves',
+                    'Traumatismes et brûlures',
+                    'Malaises et accidents',
+                    'Situations inhérentes aux risques spécifiques'
+                ],
+                prerequisites: 'Aucun prérequis. Formation accessible à tous.'
+            },
+            'hygiene-resto': {
+                title: 'Hygiène Restaurant & Hôtel',
+                category: 'Hygiène & Sécurité',
+                duration: '14h',
+                level: 'Tous niveaux',
+                certification: 'HACCP',
+                description: 'Formation obligatoire pour les établissements de restauration commerciale. Maîtrisez les bonnes pratiques d\'hygiène alimentaire et la méthode HACCP pour garantir la sécurité sanitaire de vos clients et la conformité réglementaire de votre établissement.',
+                program: [
+                    'Réglementation sanitaire en restauration',
+                    'Dangers microbiens et contaminations',
+                    'Méthode HACCP et points critiques',
+                    'Bonnes pratiques d\'hygiène (BPH)',
+                    'Traçabilité et gestion des non-conformités',
+                    'Nettoyage et désinfection',
+                    'Maîtrise des températures',
+                    'Plan de maîtrise sanitaire (PMS)',
+                    'Contrôles officiels et audits'
+                ],
+                prerequisites: 'Personnel de restauration commerciale. Aucun prérequis technique.'
+            },
+            'hygiene-entreprise': {
+                title: 'Hygiène & Sécurité en Entreprise',
+                category: 'Hygiène & Sécurité',
+                duration: '21h',
+                level: 'Tous niveaux',
+                certification: 'Oui',
+                description: 'Formation complète pour les responsables sécurité et managers. Apprenez à identifier, évaluer et prévenir les risques professionnels dans votre entreprise. Maîtrisez la réglementation et les outils de prévention pour créer un environnement de travail sûr et conforme.',
+                program: [
+                    'Cadre réglementaire de la santé et sécurité au travail',
+                    'Document unique d\'évaluation des risques (DUER)',
+                    'Identification et analyse des risques professionnels',
+                    'Prévention des accidents du travail',
+                    'Ergonomie et troubles musculo-squelettiques (TMS)',
+                    'Risques psychosociaux (RPS)',
+                    'Équipements de protection individuelle (EPI)',
+                    'Plan de prévention et protocole de sécurité',
+                    'Formation et sensibilisation du personnel',
+                    'Gestion des situations d\'urgence'
+                ],
+                prerequisites: 'Responsables sécurité, managers, chefs d\'équipe. Aucun prérequis technique.'
+            },
+            'gestion-projet': {
+                title: 'Gestion de Projet',
+                category: 'Management & Leadership',
+                duration: '35h',
+                level: 'Intermédiaire',
+                certification: 'PMP',
+                description: 'Maîtrisez les méthodologies de gestion de projet modernes, de l\'Agile au traditionnel. Cette formation complète vous permettra de planifier, piloter et livrer des projets avec succès, en utilisant les outils et techniques reconnus internationalement.',
+                program: [
+                    'Fondamentaux de la gestion de projet',
+                    'Méthodologies Agile, Scrum et Kanban',
+                    'Approche traditionnelle et cascade',
+                    'Planification et estimation des projets',
+                    'Gestion des risques et des changements',
+                    'Outils de gestion : MS Project, Jira, Trello',
+                    'Communication et reporting projet',
+                    'Gestion des parties prenantes',
+                    'Budget et ressources',
+                    'Préparation certification PMP'
+                ],
+                prerequisites: 'Expérience professionnelle recommandée. Connaissance de base en gestion de projet appréciée.'
+            },
+            'communication': {
+                title: 'Communication Professionnelle',
+                category: 'Management & Leadership',
+                duration: '20h',
+                level: 'Tous niveaux',
+                certification: 'Oui',
+                description: 'Développez vos compétences en communication pour devenir un communicant efficace et persuasif. Apprenez à adapter votre message, gérer les situations difficiles et créer des relations professionnelles solides grâce à une communication claire et impactante.',
+                program: [
+                    'Fondamentaux de la communication interpersonnelle',
+                    'Communication verbale et non-verbale',
+                    'Écoute active et empathie',
+                    'Prise de parole en public',
+                    'Techniques de présentation efficace',
+                    'Négociation et persuasion',
+                    'Gestion des conflits et situations difficiles',
+                    'Communication écrite professionnelle',
+                    'Feedback constructif et assertivité',
+                    'Communication en situation de stress'
+                ],
+                prerequisites: 'Aucun prérequis. Formation accessible à tous les professionnels.'
+            },
+            'intelligence-artificielle': {
+                title: 'Intelligence Artificielle',
+                category: 'Digital & Technologies',
+                duration: '60h',
+                level: 'Avancé',
+                certification: 'Oui',
+                description: 'Plongez dans le monde fascinant de l\'intelligence artificielle et du machine learning. Cette formation approfondie vous permettra de comprendre, concevoir et déployer des solutions d\'IA, du machine learning classique au deep learning, en passant par le traitement du langage naturel et la vision par ordinateur.',
+                program: [
+                    'Introduction à l\'IA et au Machine Learning',
+                    'Python pour l\'IA : NumPy, Pandas, Scikit-learn',
+                    'Algorithmes de Machine Learning supervisé et non supervisé',
+                    'Deep Learning avec TensorFlow et PyTorch',
+                    'Réseaux de neurones convolutifs (CNN)',
+                    'Réseaux de neurones récurrents (RNN) et LSTM',
+                    'Traitement du langage naturel (NLP)',
+                    'Computer Vision et reconnaissance d\'images',
+                    'Déploiement de modèles IA en production',
+                    'Éthique et IA responsable'
+                ],
+                prerequisites: 'Bonnes connaissances en Python et mathématiques. Expérience en programmation requise.'
+            },
+            'cloud-computing': {
+                title: 'Cloud Computing',
+                category: 'Digital & Technologies',
+                duration: '45h',
+                level: 'Intermédiaire',
+                certification: 'AWS/Azure',
+                description: 'Maîtrisez les technologies cloud et devenez expert en infrastructure cloud. Cette formation couvre les trois principaux fournisseurs cloud (AWS, Azure, Google Cloud) et vous prépare aux certifications professionnelles. Apprenez à concevoir, déployer et gérer des applications cloud scalables et sécurisées.',
+                program: [
+                    'Fondamentaux du Cloud Computing (IaaS, PaaS, SaaS)',
+                    'Amazon Web Services (AWS) : EC2, S3, RDS, Lambda',
+                    'Microsoft Azure : Virtual Machines, Storage, App Services',
+                    'Google Cloud Platform : Compute Engine, Cloud Storage',
+                    'Architecture cloud et haute disponibilité',
+                    'DevOps et CI/CD dans le cloud',
+                    'Conteneurisation : Docker et Kubernetes',
+                    'Sécurité cloud et gestion des identités',
+                    'Optimisation des coûts cloud',
+                    'Préparation certifications AWS Solutions Architect / Azure Administrator'
+                ],
+                prerequisites: 'Connaissances en systèmes d\'exploitation et réseaux. Expérience en administration système recommandée.'
+            },
+            'marketing-digital': {
+                title: 'Marketing Digital',
+                category: 'Marketing & Commercial',
+                duration: '30h',
+                level: 'Tous niveaux',
+                certification: 'Oui',
+                description: 'Maîtrisez les leviers du marketing digital pour développer votre présence en ligne et générer des leads qualifiés. Cette formation complète couvre le SEO, SEA, les réseaux sociaux, le content marketing et les outils d\'analyse pour optimiser vos campagnes digitales.',
+                program: [
+                    'Stratégie de marketing digital et persona',
+                    'SEO : référencement naturel et optimisation',
+                    'SEA : Google Ads et publicité payante',
+                    'Social Media Marketing (Facebook, Instagram, LinkedIn)',
+                    'Content Marketing et storytelling',
+                    'Email marketing et automation',
+                    'Google Analytics et mesure de performance',
+                    'Conversion Rate Optimization (CRO)',
+                    'Inbound Marketing et lead generation',
+                    'Budget et ROI des campagnes digitales'
+                ],
+                prerequisites: 'Aucun prérequis technique. Connaissance de base d\'internet recommandée.'
+            },
+            'ecommerce': {
+                title: 'E-commerce',
+                category: 'Marketing & Commercial',
+                duration: '25h',
+                level: 'Intermédiaire',
+                certification: 'Oui',
+                description: 'Lancez et développez votre boutique en ligne avec succès. Cette formation pratique vous apprend à créer, gérer et optimiser un site e-commerce performant. Maîtrisez les plateformes Shopify et WooCommerce, les stratégies de vente en ligne et l\'optimisation de la conversion.',
+                program: [
+                    'Fondamentaux du e-commerce et business model',
+                    'Création de boutique avec Shopify',
+                    'WooCommerce pour WordPress',
+                    'Gestion de catalogue et fiches produits',
+                    'Paiement en ligne et sécurité',
+                    'Logistique et gestion des stocks',
+                    'Marketing e-commerce et acquisition',
+                    'Optimisation du tunnel de conversion',
+                    'Service client et fidélisation',
+                    'Analytics et KPIs e-commerce'
+                ],
+                prerequisites: 'Connaissances de base en web et marketing digital recommandées.'
+            },
+            'techniques-vente': {
+                title: 'Techniques de Vente',
+                category: 'Marketing & Commercial',
+                duration: '20h',
+                level: 'Tous niveaux',
+                certification: 'Oui',
+                description: 'Développez vos compétences commerciales et boostez vos performances de vente. Cette formation intensive vous enseigne les techniques de prospection, de négociation et de closing éprouvées. Apprenez à gérer votre pipeline commercial et à utiliser efficacement les outils CRM.',
+                program: [
+                    'Fondamentaux de la vente B2B et B2C',
+                    'Prospection commerciale et qualification',
+                    'Techniques de découverte des besoins',
+                    'Argumentation et traitement des objections',
+                    'Négociation commerciale gagnant-gagnant',
+                    'Techniques de closing et conclusion',
+                    'CRM et gestion du pipeline commercial',
+                    'Vente consultative et solution selling',
+                    'Suivi client et fidélisation',
+                    'Psychologie de la vente et communication'
+                ],
+                prerequisites: 'Aucun prérequis. Formation adaptée aux débutants et commerciaux expérimentés.'
+            },
+            'comptabilite': {
+                title: 'Comptabilité Générale',
+                category: 'Finance & Comptabilité',
+                duration: '30h',
+                level: 'Débutant',
+                certification: 'Oui',
+                description: 'Maîtrisez les fondamentaux de la comptabilité générale et les principes comptables essentiels. Cette formation vous permet de comprendre et d\'établir les documents comptables, de tenir une comptabilité conforme et d\'utiliser les logiciels comptables professionnels.',
+                program: [
+                    'Principes et normes comptables',
+                    'Plan comptable général (PCG)',
+                    'Enregistrement des opérations courantes',
+                    'Comptabilité clients et fournisseurs',
+                    'TVA et déclarations fiscales',
+                    'Immobilisations et amortissements',
+                    'Bilan et compte de résultat',
+                    'Clôture des comptes annuels',
+                    'Logiciels comptables (Sage, Cegid, EBP)',
+                    'Analyse financière de base'
+                ],
+                prerequisites: 'Aucun prérequis comptable. Notions de mathématiques de base suffisantes.'
+            },
+            'controle-gestion': {
+                title: 'Contrôle de Gestion',
+                category: 'Finance & Comptabilité',
+                duration: '25h',
+                level: 'Intermédiaire',
+                certification: 'Oui',
+                description: 'Devenez expert en pilotage de la performance et en analyse financière. Cette formation vous apprend à élaborer des tableaux de bord, gérer les budgets, analyser les écarts et fournir des recommandations stratégiques pour optimiser la rentabilité de l\'entreprise.',
+                program: [
+                    'Rôle et missions du contrôleur de gestion',
+                    'Comptabilité analytique et calcul des coûts',
+                    'Budgets prévisionnels et suivi',
+                    'Tableaux de bord et indicateurs de performance (KPI)',
+                    'Analyse des écarts et reporting',
+                    'Seuil de rentabilité et point mort',
+                    'Prévisions financières et business plan',
+                    'Excel avancé pour le contrôle de gestion',
+                    'Power BI et visualisation de données',
+                    'Communication des résultats à la direction'
+                ],
+                prerequisites: 'Connaissances en comptabilité générale recommandées. Maîtrise d\'Excel de base.'
+            },
+            'fiscalite': {
+                title: 'Fiscalité d\'Entreprise',
+                category: 'Finance & Comptabilité',
+                duration: '20h',
+                level: 'Intermédiaire',
+                certification: 'Oui',
+                description: 'Maîtrisez la fiscalité des entreprises et optimisez la charge fiscale en toute légalité. Cette formation couvre la TVA, l\'impôt sur les sociétés, les taxes diverses et les stratégies d\'optimisation fiscale. Restez à jour avec les dernières réformes fiscales.',
+                program: [
+                    'Système fiscal français et principes généraux',
+                    'TVA : mécanismes et déclarations',
+                    'Impôt sur les sociétés (IS)',
+                    'Bénéfices industriels et commerciaux (BIC)',
+                    'Taxe sur les salaires et autres taxes',
+                    'Crédits d\'impôt et dispositifs fiscaux',
+                    'Optimisation fiscale légale',
+                    'Contrôle fiscal et contentieux',
+                    'Fiscalité internationale de base',
+                    'Actualités et réformes fiscales'
+                ],
+                prerequisites: 'Connaissances en comptabilité générale recommandées. Formation adaptée aux comptables et gestionnaires.'
             }
         };
 
@@ -864,7 +1274,7 @@ nagement Section -->
             // Afficher le modal
             const modal = document.getElementById('formationModal');
             const content = document.getElementById('modalContent');
-            
+
             modal.classList.remove('hidden');
             setTimeout(() => {
                 content.classList.remove('scale-95', 'opacity-0');
@@ -878,17 +1288,17 @@ nagement Section -->
         function closeModal() {
             const modal = document.getElementById('formationModal');
             const content = document.getElementById('modalContent');
-            
+
             content.classList.remove('scale-100', 'opacity-100');
             content.classList.add('scale-95', 'opacity-0');
-            
+
             setTimeout(() => {
                 modal.classList.add('hidden');
             }, 300);
         }
 
         // Fermer le modal en cliquant à l'extérieur
-        document.getElementById('formationModal').addEventListener('click', function(e) {
+        document.getElementById('formationModal').addEventListener('click', function (e) {
             if (e.target === this) {
                 closeModal();
             }
@@ -899,10 +1309,10 @@ nagement Section -->
             duration: 800,
             once: true
         });
-        
+
         // Initialize Feather Icons
         feather.replace();
-        
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -918,4 +1328,5 @@ nagement Section -->
         });
     </script>
 </body>
+
 </html>
