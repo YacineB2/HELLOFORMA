@@ -722,50 +722,11 @@
             });
         });
 
-        // Formation cards stagger animation
-        gsap.from(".bg-gradient-to-br.from-emerald-50, .bg-gradient-to-br.from-blue-50", {
-            opacity: 0,
-            y: 50,
-            stagger: 0.2,
-            duration: 0.8,
-            ease: "power3.out",
-            scrollTrigger: {
-                trigger: ".py-20.bg-gray-50",
-                start: "top 70%",
-                once: true
-            }
-        });
+        // Formation cards stagger animation (removed - using AOS instead to avoid conflicts)
 
-        // Testimonials stagger
-        gsap.from(".bg-gray-50.p-8.rounded-xl.shadow-lg", {
-            opacity: 0,
-            y: 30,
-            stagger: 0.15,
-            duration: 0.6,
-            ease: "back.out(1.2)",
-            scrollTrigger: {
-                trigger: ".py-20.bg-white",
-                start: "top 70%",
-                once: true
-            }
-        });
+        // Testimonials stagger (removed - using AOS instead to avoid conflicts)
 
-        // FAQ accordion effect
-        const faqItems = document.querySelectorAll(".bg-white.p-6.rounded-xl.shadow-lg");
-        faqItems.forEach((item, index) => {
-            gsap.from(item, {
-                opacity: 0,
-                x: -30,
-                duration: 0.5,
-                delay: index * 0.1,
-                ease: "power2.out",
-                scrollTrigger: {
-                    trigger: item,
-                    start: "top 85%",
-                    once: true
-                }
-            });
-        });
+        // FAQ accordion effect (removed - using AOS instead to avoid conflicts)
 
         // Guarantee section pulse effect
         gsap.to(".w-24.h-24.bg-white.rounded-full", {
