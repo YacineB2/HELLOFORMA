@@ -8,7 +8,7 @@
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500 HT;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -123,17 +123,26 @@
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="formations.html" class="nav-link text-helloforma-blue font-medium">Formations</a>
                     <a href="methodes.html" class="nav-link text-gray-700 hover:text-helloforma-blue">Méthodes</a>
-                    <a href="index.html#certifications"
-                        class="nav-link text-gray-700 hover:text-helloforma-blue">Certifications</a>
-                    <a href="index.html#contact"
+                    <a href="immobilier.html" class="nav-link text-gray-700 hover:text-helloforma-blue">Immobilier</a>
+                    <a href="contact.html"
                         class="px-6 py-2 bg-helloforma-blue text-white rounded-lg hover:bg-helloforma-dark transition font-medium">
                         Nous Contacter
                     </a>
                 </div>
 
-                <button class="md:hidden">
-                    <i data-feather="menu"></i>
+                <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-helloforma-blue">
+                    <i data-feather="menu" class="w-6 h-6"></i>
                 </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-4 py-4 space-y-3">
+                <a href="formations.html" class="block py-2 text-helloforma-blue font-medium hover:bg-gray-50 rounded-lg px-3 transition">Formations</a>
+                <a href="methodes.html" class="block py-2 text-gray-700 hover:text-helloforma-blue hover:bg-gray-50 rounded-lg px-3 transition">Méthodes</a>
+                <a href="immobilier.html" class="block py-2 text-gray-700 hover:text-helloforma-blue hover:bg-gray-50 rounded-lg px-3 transition">Immobilier</a>
+                <a href="contact.html" class="block py-2 bg-helloforma-blue text-white rounded-lg px-3 text-center hover:bg-helloforma-dark transition">Nous Contacter</a>
             </div>
         </div>
     </nav>
@@ -188,116 +197,158 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="course-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up">
-                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                        <i data-feather="code" class="text-helloforma-blue"></i>
+                <div class="course-card bg-white rounded-xl overflow-hidden shadow-lg border" data-aos="fade-up">
+                    <div class="w-full h-48 overflow-hidden">
+                        <img src="/static/images/course-web-development.jpg" alt="Développement Web"
+                            class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Développement Web</h3>
-                    <p class="text-gray-600 mb-4">HTML5, CSS3, JavaScript, React, Vue.js, Node.js</p>
-                    <ul class="text-sm text-gray-500 HT mb-6 space-y-1">
-                        <li>• 40h de formation</li>
-                        <li>• Projets pratiques</li>
-                        <li>• Certification incluse</li>
-                    </ul>
-                    <div class="flex items-center justify-between">
-                        <span class="text-helloforma-blue font-semibold">À partir de 500 HT€</span>
-                        <a href="#" onclick="openModal('dev-web')"
-                            class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                    <div class="p-8">
+                        <div
+                            class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 -mt-14 relative z-10 shadow-lg">
+                            <i data-feather="code" class="text-helloforma-blue"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Développement Web</h3>
+                        <p class="text-gray-600 mb-4">HTML5, CSS3, JavaScript, React, Vue.js, Node.js</p>
+                        <ul class="text-sm text-gray-500 mb-6 space-y-1">
+                            <li>• 40h de formation</li>
+                            <li>• Projets pratiques</li>
+                            <li>• Certification incluse</li>
+                        </ul>
+                        <div class="flex items-center justify-between">
+                            <span class="text-helloforma-blue font-semibold">À partir de 500€ TTC</span>
+                            <a href="#" onclick="openModal('dev-web')"
+                                class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="course-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up"
+                <div class="course-card bg-white rounded-xl overflow-hidden shadow-lg border" data-aos="fade-up"
                     data-aos-delay="100">
-                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                        <i data-feather="smartphone" class="text-helloforma-accent"></i>
+                    <div class="w-full h-48 overflow-hidden">
+                        <img src="/static/images/course-mobile-dev.jpg" alt="Développement Mobile"
+                            class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Développement Mobile</h3>
-                    <p class="text-gray-600 mb-4">React Native, Flutter, développement cross-platform</p>
-                    <ul class="text-sm text-gray-500 HT mb-6 space-y-1">
-                        <li>• 35h de formation</li>
-                        <li>• Applications réelles</li>
-                        <li>• Publication sur stores</li>
-                    </ul>
-                    <div class="flex items-center justify-between">
-                        <span class="text-helloforma-blue font-semibold">À partir de 500 HT€</span>
-                        <a href="#" onclick="openModal('dev-mobile')"
-                            class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                    <div class="p-8">
+                        <div
+                            class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 -mt-14 relative z-10 shadow-lg">
+                            <i data-feather="smartphone" class="text-helloforma-accent"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Développement Mobile</h3>
+                        <p class="text-gray-600 mb-4">React Native, Flutter, développement cross-platform</p>
+                        <ul class="text-sm text-gray-500 mb-6 space-y-1">
+                            <li>• 35h de formation</li>
+                            <li>• Applications réelles</li>
+                            <li>• Publication sur stores</li>
+                        </ul>
+                        <div class="flex items-center justify-between">
+                            <span class="text-helloforma-blue font-semibold">À partir de 500€ TTC</span>
+                            <a href="#" onclick="openModal('dev-mobile')"
+                                class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="course-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up"
+                <div class="course-card bg-white rounded-xl overflow-hidden shadow-lg border" data-aos="fade-up"
                     data-aos-delay="200">
-                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                        <i data-feather="bar-chart" class="text-purple-600"></i>
+                    <div class="w-full h-48 overflow-hidden">
+                        <img src="/static/images/course-data-analytics.jpg" alt="Data Science & Analytics"
+                            class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Data Science & Analytics</h3>
-                    <p class="text-gray-600 mb-4">Python, R, SQL, Power BI, Machine Learning</p>
-                    <ul class="text-sm text-gray-500 HT mb-6 space-y-1">
-                        <li>• 50h de formation</li>
-                        <li>• Cas d'usage réels</li>
-                        <li>• Outils professionnels</li>
-                    </ul>
-                    <div class="flex items-center justify-between">
-                        <span class="text-helloforma-blue font-semibold">À partir de 500 HT€</span>
-                        <a href="#" onclick="openModal('data-science')"
-                            class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                    <div class="p-8">
+                        <div
+                            class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 -mt-14 relative z-10 shadow-lg">
+                            <i data-feather="bar-chart" class="text-purple-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Data Science & Analytics</h3>
+                        <p class="text-gray-600 mb-4">Python, R, SQL, Power BI, Machine Learning</p>
+                        <ul class="text-sm text-gray-500 mb-6 space-y-1">
+                            <li>• 42h de formation</li>
+                            <li>• Cas d'usage réels</li>
+                            <li>• Outils professionnels</li>
+                        </ul>
+                        <div class="flex items-center justify-between">
+                            <span class="text-helloforma-blue font-semibold">À partir de 500€ TTC</span>
+                            <a href="#" onclick="openModal('data-science')"
+                                class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="course-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up"
+                <div class="course-card bg-white rounded-xl overflow-hidden shadow-lg border" data-aos="fade-up"
                     data-aos-delay="300">
-                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-                        <i data-feather="shield" class="text-red-600"></i>
+                    <div class="w-full h-48 overflow-hidden">
+                        <img src="/static/images/course-cybersecurity.jpg" alt="Cybersécurité"
+                            class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Cybersécurité</h3>
-                    <p class="text-gray-600 mb-4">Sécurité réseau, RGPD, audit sécurité, ethical hacking</p>
-                    <ul class="text-sm text-gray-500 HT mb-6 space-y-1">
-                        <li>• 30h de formation</li>
-                        <li>• Labs pratiques</li>
-                        <li>• Certification CISSP</li>
-                    </ul>
-                    <div class="flex items-center justify-between">
-                        <span class="text-helloforma-blue font-semibold">À partir de 500 HT€</span>
-                        <a href="#" onclick="openModal('cybersecurite')"
-                            class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                    <div class="p-8">
+                        <div
+                            class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4 -mt-14 relative z-10 shadow-lg">
+                            <i data-feather="shield" class="text-red-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Cybersécurité</h3>
+                        <p class="text-gray-600 mb-4">Sécurité réseau, RGPD, audit sécurité, ethical hacking</p>
+                        <ul class="text-sm text-gray-500 mb-6 space-y-1">
+                            <li>• 30h de formation</li>
+                            <li>• Labs pratiques</li>
+                            <li>• Certification CISSP</li>
+                        </ul>
+                        <div class="flex items-center justify-between">
+                            <span class="text-helloforma-blue font-semibold">À partir de 500€ TTC</span>
+                            <a href="#" onclick="openModal('cybersecurite')"
+                                class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="course-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up"
+                <div class="course-card bg-white rounded-xl overflow-hidden shadow-lg border" data-aos="fade-up"
                     data-aos-delay="400">
-                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
-                        <i data-feather="cpu" class="text-indigo-600"></i>
+                    <div class="w-full h-48 overflow-hidden">
+                        <img src="/static/images/course-ai.jpg" alt="Intelligence Artificielle"
+                            class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Intelligence Artificielle</h3>
-                    <p class="text-gray-600 mb-4">Machine Learning, Deep Learning, NLP, Computer Vision</p>
-                    <ul class="text-sm text-gray-500 HT mb-6 space-y-1">
-                        <li>• 60h de formation</li>
-                        <li>• Projets IA concrets</li>
-                        <li>• TensorFlow & PyTorch</li>
-                    </ul>
-                    <div class="flex items-center justify-between">
-                        <span class="text-helloforma-blue font-semibold">À partir de 500 HT€</span>
-                        <a href="#" onclick="openModal('intelligence-artificielle')"
-                            class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                    <div class="p-8">
+                        <div
+                            class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4 -mt-14 relative z-10 shadow-lg">
+                            <i data-feather="cpu" class="text-indigo-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Intelligence Artificielle</h3>
+                        <p class="text-gray-600 mb-4">Machine Learning, Deep Learning, NLP, Computer Vision</p>
+                        <ul class="text-sm text-gray-500 mb-6 space-y-1">
+                            <li>• 42h de formation</li>
+                            <li>• Projets IA concrets</li>
+                            <li>• TensorFlow & PyTorch</li>
+                        </ul>
+                        <div class="flex items-center justify-between">
+                            <span class="text-helloforma-blue font-semibold">À partir de 500€ TTC</span>
+                            <a href="#" onclick="openModal('intelligence-artificielle')"
+                                class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="course-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up"
-                    data-aos-delay="500 HT">
-                    <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
-                        <i data-feather="cloud" class="text-yellow-600"></i>
+                <div class="course-card bg-white rounded-xl overflow-hidden shadow-lg border" data-aos="fade-up"
+                    data-aos-delay="500">
+                    <div class="w-full h-48 overflow-hidden">
+                        <img src="/static/images/course-cloud.jpg" alt="Cloud Computing"
+                            class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Cloud Computing</h3>
-                    <p class="text-gray-600 mb-4">AWS, Azure, Google Cloud, DevOps, Kubernetes</p>
-                    <ul class="text-sm text-gray-500 HT mb-6 space-y-1">
-                        <li>• 45h de formation</li>
-                        <li>• Environnements cloud</li>
-                        <li>• Certifications AWS/Azure</li>
-                    </ul>
-                    <div class="flex items-center justify-between">
-                        <span class="text-helloforma-blue font-semibold">À partir de 500 HT€</span>
-                        <a href="#" onclick="openModal('cloud-computing')"
-                            class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                    <div class="p-8">
+                        <div
+                            class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4 -mt-14 relative z-10 shadow-lg">
+                            <i data-feather="cloud" class="text-yellow-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Cloud Computing</h3>
+                        <p class="text-gray-600 mb-4">AWS, Azure, Google Cloud, DevOps, Kubernetes</p>
+                        <ul class="text-sm text-gray-500 mb-6 space-y-1">
+                            <li>• 42h de formation</li>
+                            <li>• Environnements cloud</li>
+                            <li>• Certifications AWS/Azure</li>
+                        </ul>
+                        <div class="flex items-center justify-between">
+                            <span class="text-helloforma-blue font-semibold">À partir de 500€ TTC</span>
+                            <a href="#" onclick="openModal('cloud-computing')"
+                                class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -315,57 +366,80 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="course-card bg-white rounded-xl p-8 shadow-lg" data-aos="fade-up">
-                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                        <i data-feather="users" class="text-helloforma-accent"></i>
+                <div class="course-card bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up">
+                    <div class="w-full h-48 overflow-hidden">
+                        <img src="/static/images/course-management.png" alt="Management d'Équipe"
+                            class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Management d'Équipe</h3>
-                    <p class="text-gray-600 mb-4">Leadership, motivation, gestion des talents</p>
-                    <ul class="text-sm text-gray-500 HT mb-6 space-y-1">
-                        <li>• 25h de formation</li>
-                        <li>• Mises en situation</li>
-                        <li>• Coaching inclus</li>
-                    </ul>
-                    <div class="flex items-center justify-between">
-                        <span class="text-helloforma-blue font-semibold">À partir de 500 HT€</span>
-                        <a href="#" onclick="openModal('management')"
-                            class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
-                    </div>
-                </div>
-
-                <div class="course-card bg-white rounded-xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                        <i data-feather="target" class="text-helloforma-blue"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Gestion de Projet</h3>
-                    <p class="text-gray-600 mb-4">Agile, Scrum, PMP, planification et suivi</p>
-                    <ul class="text-sm text-gray-500 HT mb-6 space-y-1">
-                        <li>• 35h de formation</li>
-                        <li>• Outils professionnels</li>
-                        <li>• Certification PMP</li>
-                    </ul>
-                    <div class="flex items-center justify-between">
-                        <span class="text-helloforma-blue font-semibold">À partir de 500 HT€</span>
-                        <a href="#" onclick="openModal('gestion-projet')"
-                            class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                    <div class="p-8">
+                        <div
+                            class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 -mt-14 relative z-10 shadow-lg">
+                            <i data-feather="users" class="text-helloforma-accent"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Management d'Équipe</h3>
+                        <p class="text-gray-600 mb-4">Leadership, motivation, gestion des talents</p>
+                        <ul class="text-sm text-gray-500 mb-6 space-y-1">
+                            <li>• 25h de formation</li>
+                            <li>• Mises en situation</li>
+                            <li>• Coaching inclus</li>
+                        </ul>
+                        <div class="flex items-center justify-between">
+                            <span class="text-helloforma-blue font-semibold">À partir de 500€ TTC</span>
+                            <a href="#" onclick="openModal('management')"
+                                class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="course-card bg-white rounded-xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                        <i data-feather="message-circle" class="text-purple-600"></i>
+                <div class="course-card bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div class="w-full h-48 overflow-hidden">
+                        <img src="/static/images/course-project-management.jpg" alt="Gestion de Projet"
+                            class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Communication</h3>
-                    <p class="text-gray-600 mb-4">Prise de parole, négociation, gestion des conflits</p>
-                    <ul class="text-sm text-gray-500 HT mb-6 space-y-1">
-                        <li>• 20h de formation</li>
-                        <li>• Exercices pratiques</li>
-                        <li>• Feedback vidéo</li>
-                    </ul>
-                    <div class="flex items-center justify-between">
-                        <span class="text-helloforma-blue font-semibold">À partir de 500 HT€</span>
-                        <a href="#" onclick="openModal('communication')"
-                            class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                    <div class="p-8">
+                        <div
+                            class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 -mt-14 relative z-10 shadow-lg">
+                            <i data-feather="target" class="text-helloforma-blue"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Gestion de Projet</h3>
+                        <p class="text-gray-600 mb-4">Agile, Scrum, PMP, planification et suivi</p>
+                        <ul class="text-sm text-gray-500 mb-6 space-y-1">
+                            <li>• 35h de formation</li>
+                            <li>• Outils professionnels</li>
+                            <li>• Certification PMP</li>
+                        </ul>
+                        <div class="flex items-center justify-between">
+                            <span class="text-helloforma-blue font-semibold">À partir de 500€ TTC</span>
+                            <a href="#" onclick="openModal('gestion-projet')"
+                                class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <div class="w-full h-48 overflow-hidden">
+                        <img src="/static/images/course-communication.jpg" alt="Communication"
+                            class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+                    </div>
+                    <div class="p-8">
+                        <div
+                            class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 -mt-14 relative z-10 shadow-lg">
+                            <i data-feather="message-circle" class="text-purple-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Communication</h3>
+                        <p class="text-gray-600 mb-4">Prise de parole, négociation, gestion des conflits</p>
+                        <ul class="text-sm text-gray-500 mb-6 space-y-1">
+                            <li>• 20h de formation</li>
+                            <li>• Exercices pratiques</li>
+                            <li>• Feedback vidéo</li>
+                        </ul>
+                        <div class="flex items-center justify-between">
+                            <span class="text-helloforma-blue font-semibold">À partir de 500€ TTC</span>
+                            <a href="#" onclick="openModal('communication')"
+                                class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -383,59 +457,80 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="course-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up">
-                    <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-6">
-                        <i data-feather="trending-up" class="text-pink-600"></i>
+                <div class="course-card bg-white rounded-xl overflow-hidden shadow-lg border" data-aos="fade-up">
+                    <div class="w-full h-48 overflow-hidden">
+                        <img src="/static/images/course-digital-marketing.jpg" alt="Marketing Digital"
+                            class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Marketing Digital</h3>
-                    <p class="text-gray-600 mb-4">SEO, SEA, réseaux sociaux, content marketing</p>
-                    <ul class="text-sm text-gray-500 HT mb-6 space-y-1">
-                        <li>• 30h de formation</li>
-                        <li>• Campagnes réelles</li>
-                        <li>• Outils Google/Meta</li>
-                    </ul>
-                    <div class="flex items-center justify-between">
-                        <span class="text-helloforma-blue font-semibold">À partir de 500 HT€</span>
-                        <a href="#" onclick="openModal('marketing-digital')"
-                            class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                    <div class="p-8">
+                        <div
+                            class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4 -mt-14 relative z-10 shadow-lg">
+                            <i data-feather="trending-up" class="text-pink-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Marketing Digital</h3>
+                        <p class="text-gray-600 mb-4">SEO, SEA, réseaux sociaux, content marketing</p>
+                        <ul class="text-sm text-gray-500 mb-6 space-y-1">
+                            <li>• 30h de formation</li>
+                            <li>• Campagnes réelles</li>
+                            <li>• Outils Google/Meta</li>
+                        </ul>
+                        <div class="flex items-center justify-between">
+                            <span class="text-helloforma-blue font-semibold">À partir de 500€ TTC</span>
+                            <a href="#" onclick="openModal('marketing-digital')"
+                                class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="course-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up"
+                <div class="course-card bg-white rounded-xl overflow-hidden shadow-lg border" data-aos="fade-up"
                     data-aos-delay="100">
-                    <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
-                        <i data-feather="shopping-cart" class="text-orange-600"></i>
+                    <div class="w-full h-48 overflow-hidden">
+                        <img src="/static/images/course-ecommerce.jpg" alt="E-commerce"
+                            class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">E-commerce</h3>
-                    <p class="text-gray-600 mb-4">Shopify, WooCommerce, stratégies de vente en ligne</p>
-                    <ul class="text-sm text-gray-500 HT mb-6 space-y-1">
-                        <li>• 25h de formation</li>
-                        <li>• Boutique test</li>
-                        <li>• Optimisation conversion</li>
-                    </ul>
-                    <div class="flex items-center justify-between">
-                        <span class="text-helloforma-blue font-semibold">À partir de 500 HT€</span>
-                        <a href="#" onclick="openModal('ecommerce')"
-                            class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                    <div class="p-8">
+                        <div
+                            class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4 -mt-14 relative z-10 shadow-lg">
+                            <i data-feather="shopping-cart" class="text-orange-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">E-commerce</h3>
+                        <p class="text-gray-600 mb-4">Shopify, WooCommerce, stratégies de vente en ligne</p>
+                        <ul class="text-sm text-gray-500 mb-6 space-y-1">
+                            <li>• 25h de formation</li>
+                            <li>• Boutique test</li>
+                            <li>• Optimisation conversion</li>
+                        </ul>
+                        <div class="flex items-center justify-between">
+                            <span class="text-helloforma-blue font-semibold">À partir de 500€ TTC</span>
+                            <a href="#" onclick="openModal('ecommerce')"
+                                class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="course-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up"
+                <div class="course-card bg-white rounded-xl overflow-hidden shadow-lg border" data-aos="fade-up"
                     data-aos-delay="200">
-                    <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
-                        <i data-feather="phone" class="text-teal-600"></i>
+                    <div class="w-full h-48 overflow-hidden">
+                        <img src="/static/images/course-sales.jpg" alt="Techniques de Vente"
+                            class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Techniques de Vente</h3>
-                    <p class="text-gray-600 mb-4">Prospection, négociation, closing, CRM</p>
-                    <ul class="text-sm text-gray-500 HT mb-6 space-y-1">
-                        <li>• 20h de formation</li>
-                        <li>• Jeux de rôle</li>
-                        <li>• Suivi personnalisé</li>
-                    </ul>
-                    <div class="flex items-center justify-between">
-                        <span class="text-helloforma-blue font-semibold">À partir de 500 HT€</span>
-                        <a href="#" onclick="openModal('techniques-vente')"
-                            class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                    <div class="p-8">
+                        <div
+                            class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4 -mt-14 relative z-10 shadow-lg">
+                            <i data-feather="phone" class="text-teal-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Techniques de Vente</h3>
+                        <p class="text-gray-600 mb-4">Prospection, négociation, closing, CRM</p>
+                        <ul class="text-sm text-gray-500 mb-6 space-y-1">
+                            <li>• 20h de formation</li>
+                            <li>• Jeux de rôle</li>
+                            <li>• Suivi personnalisé</li>
+                        </ul>
+                        <div class="flex items-center justify-between">
+                            <span class="text-helloforma-blue font-semibold">À partir de 500€ TTC</span>
+                            <a href="#" onclick="openModal('techniques-vente')"
+                                class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -453,57 +548,80 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="course-card bg-white rounded-xl p-8 shadow-lg" data-aos="fade-up">
-                    <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
-                        <i data-feather="calculator" class="text-emerald-600"></i>
+                <div class="course-card bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up">
+                    <div class="w-full h-48 overflow-hidden">
+                        <img src="/static/images/course-accounting.jpg" alt="Comptabilité Générale"
+                            class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Comptabilité Générale</h3>
-                    <p class="text-gray-600 mb-4">Principes comptables, bilan, compte de résultat</p>
-                    <ul class="text-sm text-gray-500 HT mb-6 space-y-1">
-                        <li>• 30h de formation</li>
-                        <li>• Logiciels comptables</li>
-                        <li>• Cas pratiques</li>
-                    </ul>
-                    <div class="flex items-center justify-between">
-                        <span class="text-helloforma-blue font-semibold">À partir de 500 HT€</span>
-                        <a href="#" onclick="openModal('comptabilite')"
-                            class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
-                    </div>
-                </div>
-
-                <div class="course-card bg-white rounded-xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                        <i data-feather="pie-chart" class="text-helloforma-blue"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Contrôle de Gestion</h3>
-                    <p class="text-gray-600 mb-4">Tableaux de bord, budgets, analyse des écarts</p>
-                    <ul class="text-sm text-gray-500 HT mb-6 space-y-1">
-                        <li>• 25h de formation</li>
-                        <li>• Outils Excel avancés</li>
-                        <li>• Reporting financier</li>
-                    </ul>
-                    <div class="flex items-center justify-between">
-                        <span class="text-helloforma-blue font-semibold">À partir de 500 HT€</span>
-                        <a href="#" onclick="openModal('controle-gestion')"
-                            class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                    <div class="p-8">
+                        <div
+                            class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4 -mt-14 relative z-10 shadow-lg">
+                            <i data-feather="calculator" class="text-emerald-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Comptabilité Générale</h3>
+                        <p class="text-gray-600 mb-4">Principes comptables, bilan, compte de résultat</p>
+                        <ul class="text-sm text-gray-500 mb-6 space-y-1">
+                            <li>• 30h de formation</li>
+                            <li>• Logiciels comptables</li>
+                            <li>• Cas pratiques</li>
+                        </ul>
+                        <div class="flex items-center justify-between">
+                            <span class="text-helloforma-blue font-semibold">À partir de 500€ TTC</span>
+                            <a href="#" onclick="openModal('comptabilite')"
+                                class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="course-card bg-white rounded-xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-                        <i data-feather="file-text" class="text-red-600"></i>
+                <div class="course-card bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div class="w-full h-48 overflow-hidden">
+                        <img src="/static/images/course-finance.jpg" alt="Contrôle de Gestion"
+                            class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Fiscalité</h3>
-                    <p class="text-gray-600 mb-4">TVA, IS, optimisation fiscale, déclarations</p>
-                    <ul class="text-sm text-gray-500 HT mb-6 space-y-1">
-                        <li>• 20h de formation</li>
-                        <li>• Actualités fiscales</li>
-                        <li>• Cas concrets</li>
-                    </ul>
-                    <div class="flex items-center justify-between">
-                        <span class="text-helloforma-blue font-semibold">À partir de 500 HT€</span>
-                        <a href="#" onclick="openModal('fiscalite')"
-                            class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                    <div class="p-8">
+                        <div
+                            class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 -mt-14 relative z-10 shadow-lg">
+                            <i data-feather="pie-chart" class="text-helloforma-blue"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Contrôle de Gestion</h3>
+                        <p class="text-gray-600 mb-4">Tableaux de bord, budgets, analyse des écarts</p>
+                        <ul class="text-sm text-gray-500 mb-6 space-y-1">
+                            <li>• 25h de formation</li>
+                            <li>• Outils Excel avancés</li>
+                            <li>• Reporting financier</li>
+                        </ul>
+                        <div class="flex items-center justify-between">
+                            <span class="text-helloforma-blue font-semibold">À partir de 500€ TTC</span>
+                            <a href="#" onclick="openModal('controle-gestion')"
+                                class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <div class="w-full h-48 overflow-hidden">
+                        <img src="/static/images/course-tax.jpg" alt="Fiscalité"
+                            class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+                    </div>
+                    <div class="p-8">
+                        <div
+                            class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4 -mt-14 relative z-10 shadow-lg">
+                            <i data-feather="file-text" class="text-red-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Fiscalité</h3>
+                        <p class="text-gray-600 mb-4">TVA, IS, optimisation fiscale, déclarations</p>
+                        <ul class="text-sm text-gray-500 mb-6 space-y-1">
+                            <li>• 20h de formation</li>
+                            <li>• Actualités fiscales</li>
+                            <li>• Cas concrets</li>
+                        </ul>
+                        <div class="flex items-center justify-between">
+                            <span class="text-helloforma-blue font-semibold">À partir de 500€ TTC</span>
+                            <a href="#" onclick="openModal('fiscalite')"
+                                class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -522,59 +640,82 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="course-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up">
-                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-                        <i data-feather="heart" class="text-red-600"></i>
+                <div class="course-card bg-white rounded-xl overflow-hidden shadow-lg border" data-aos="fade-up">
+                    <div class="w-full h-48 overflow-hidden">
+                        <img src="/static/images/course-sst.jpg" alt="Sauveteur Secouriste du Travail (SST)"
+                            class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Sauveteur Secouriste du Travail (SST)</h3>
-                    <p class="text-gray-600 mb-4">Formation aux premiers secours en entreprise, gestes qui sauvent</p>
-                    <ul class="text-sm text-gray-500 HT mb-6 space-y-1">
-                        <li>• 14h de formation</li>
-                        <li>• Certification SST</li>
-                        <li>• Pratique intensive</li>
-                    </ul>
-                    <div class="flex items-center justify-between">
-                        <span class="text-helloforma-blue font-semibold">À partir de 500 HT€</span>
-                        <a href="#" onclick="openModal('sst')"
-                            class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                    <div class="p-8">
+                        <div
+                            class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4 -mt-14 relative z-10 shadow-lg">
+                            <i data-feather="heart" class="text-red-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Sauveteur Secouriste du Travail (SST)</h3>
+                        <p class="text-gray-600 mb-4">Formation aux premiers secours en entreprise, gestes qui sauvent
+                        </p>
+                        <ul class="text-sm text-gray-500 mb-6 space-y-1">
+                            <li>• 14h de formation</li>
+                            <li>• Certification SST</li>
+                            <li>• Pratique intensive</li>
+                        </ul>
+                        <div class="flex items-center justify-between">
+                            <span class="text-helloforma-blue font-semibold">À partir de 500€ TTC</span>
+                            <a href="#" onclick="openModal('sst')"
+                                class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="course-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up"
+                <div class="course-card bg-white rounded-xl overflow-hidden shadow-lg border" data-aos="fade-up"
                     data-aos-delay="100">
-                    <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
-                        <i data-feather="coffee" class="text-orange-600"></i>
+                    <div class="w-full h-48 overflow-hidden">
+                        <img src="/static/images/course-hygiene.jpg" alt="Hygiène Restaurant & Hôtel"
+                            class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Hygiène Restaurant & Hôtel</h3>
-                    <p class="text-gray-600 mb-4">HACCP, normes sanitaires, manipulation des denrées alimentaires</p>
-                    <ul class="text-sm text-gray-500 HT mb-6 space-y-1">
-                        <li>• 14h de formation</li>
-                        <li>• Certification HACCP</li>
-                        <li>• Conformité réglementaire</li>
-                    </ul>
-                    <div class="flex items-center justify-between">
-                        <span class="text-helloforma-blue font-semibold">À partir de 500 HT€</span>
-                        <a href="#" onclick="openModal('hygiene-resto')"
-                            class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                    <div class="p-8">
+                        <div
+                            class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4 -mt-14 relative z-10 shadow-lg">
+                            <i data-feather="coffee" class="text-orange-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Hygiène Restaurant & Hôtel</h3>
+                        <p class="text-gray-600 mb-4">HACCP, normes sanitaires, manipulation des denrées alimentaires
+                        </p>
+                        <ul class="text-sm text-gray-500 mb-6 space-y-1">
+                            <li>• 14h de formation</li>
+                            <li>• Certification HACCP</li>
+                            <li>• Conformité réglementaire</li>
+                        </ul>
+                        <div class="flex items-center justify-between">
+                            <span class="text-helloforma-blue font-semibold">À partir de 500€ TTC</span>
+                            <a href="#" onclick="openModal('hygiene-resto')"
+                                class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="course-card bg-white rounded-xl p-8 shadow-lg border" data-aos="fade-up"
+                <div class="course-card bg-white rounded-xl overflow-hidden shadow-lg border" data-aos="fade-up"
                     data-aos-delay="200">
-                    <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
-                        <i data-feather="alert-triangle" class="text-yellow-600"></i>
+                    <div class="w-full h-48 overflow-hidden">
+                        <img src="/static/images/course-safety.jpg" alt="Hygiène & Sécurité en Entreprise"
+                            class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Hygiène & Sécurité en Entreprise</h3>
-                    <p class="text-gray-600 mb-4">Prévention des risques, document unique, sécurité au travail</p>
-                    <ul class="text-sm text-gray-500 HT mb-6 space-y-1">
-                        <li>• 21h de formation</li>
-                        <li>• Document unique</li>
-                        <li>• Évaluation des risques</li>
-                    </ul>
-                    <div class="flex items-center justify-between">
-                        <span class="text-helloforma-blue font-semibold">À partir de 500 HT€</span>
-                        <a href="#" onclick="openModal('hygiene-entreprise')"
-                            class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                    <div class="p-8">
+                        <div
+                            class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4 -mt-14 relative z-10 shadow-lg">
+                            <i data-feather="alert-triangle" class="text-yellow-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Hygiène & Sécurité en Entreprise</h3>
+                        <p class="text-gray-600 mb-4">Prévention des risques, document unique, sécurité au travail</p>
+                        <ul class="text-sm text-gray-500 mb-6 space-y-1">
+                            <li>• 21h de formation</li>
+                            <li>• Document unique</li>
+                            <li>• Évaluation des risques</li>
+                        </ul>
+                        <div class="flex items-center justify-between">
+                            <span class="text-helloforma-blue font-semibold">À partir de 500€ TTC</span>
+                            <a href="#" onclick="openModal('hygiene-entreprise')"
+                                class="text-helloforma-blue hover:text-helloforma-dark font-medium">Détails →</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -591,8 +732,8 @@
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div class="course-card immobilier-highlight bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-xl p-8 shadow-2xl border-3 border-emerald-400 relative overflow-hidden"
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch">
+                <div class="course-card immobilier-highlight bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-xl p-8 shadow-2xl border-3 border-emerald-400 relative overflow-hidden flex flex-col"
                     data-aos="fade-up">
                     <!-- Badge "Populaire" -->
                     <div
@@ -614,8 +755,8 @@
                         Formation complète pour obtenir la carte T et exercer les activités de transaction immobilière :
                         vente, achat, négociation et intermédiation.
                     </p>
-                    <ul class="text-sm text-gray-500 HT mb-6 space-y-2">
-                        <li>• <strong>150h de formation</strong> (42h minimum réglementaires)</li>
+                    <ul class="text-sm text-gray-500 mb-6 space-y-2 flex-grow">
+                        <li>• <strong>42h de formation</strong> (minimum réglementaire)</li>
                         <li>• Droit immobilier et de la construction</li>
                         <li>• Techniques de négociation commerciale</li>
                         <li>• Déontologie et réglementation professionnelle</li>
@@ -623,10 +764,10 @@
                         <li>• Stage pratique en agence</li>
                         <li>• Préparation aux examens préfectoraux</li>
                     </ul>
-                    <div class="border-t pt-4">
+                    <div class="border-t pt-4 mt-auto">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="text-helloforma-blue font-semibold text-lg">À partir de 500 HT€</span>
-                            <span class="text-sm text-gray-500 HT">Remboursement OPCO</span>
+                            <span class="text-helloforma-blue font-semibold text-lg">À partir de 500€ TTC</span>
+                            <span class="text-sm text-gray-500">Remboursement OPCO</span>
                         </div>
                         <a href="contact.html?formation=carte-t&message=Je%20souhaite%20m%27inscrire%20%C3%A0%20la%20formation%20Transaction%20Immobili%C3%A8re%20(Carte%20T).%20Merci%20de%20me%20recontacter%20pour%20finaliser%20mon%20inscription."
                             class="w-full bg-gradient-to-r from-emerald-600 to-emerald-700 text-white py-4 px-6 rounded-lg hover:from-emerald-700 hover:to-emerald-800 transition font-bold text-center block shadow-lg transform hover:scale-105">
@@ -635,7 +776,7 @@
                     </div>
                 </div>
 
-                <div class="course-card immobilier-highlight bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8 shadow-2xl border-3 border-blue-400 relative overflow-hidden"
+                <div class="course-card immobilier-highlight bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8 shadow-2xl border-3 border-blue-400 relative overflow-hidden flex flex-col"
                     data-aos="fade-up" data-aos-delay="100">
                     <!-- Badge "Recommandé" -->
                     <div
@@ -657,8 +798,8 @@
                         Formation spécialisée pour obtenir la carte G et exercer les activités de gestion locative,
                         administration de biens et syndic de copropriété.
                     </p>
-                    <ul class="text-sm text-gray-500 HT mb-6 space-y-2">
-                        <li>• <strong>120h de formation</strong> (42h minimum réglementaires)</li>
+                    <ul class="text-sm text-gray-500 mb-6 space-y-2 flex-grow">
+                        <li>• <strong>42h de formation</strong> (minimum réglementaire)</li>
                         <li>• Droit de la copropriété et de la location</li>
                         <li>• Gestion locative et administrative</li>
                         <li>• Comptabilité immobilière</li>
@@ -666,10 +807,10 @@
                         <li>• Contentieux et procédures</li>
                         <li>• Logiciels de gestion immobilière</li>
                     </ul>
-                    <div class="border-t pt-4">
+                    <div class="border-t pt-4 mt-auto">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="text-helloforma-blue font-semibold text-lg">À partir de 500 HT€</span>
-                            <span class="text-sm text-gray-500 HT">Remboursement OPCO</span>
+                            <span class="text-helloforma-blue font-semibold text-lg">À partir de 500€ TTC</span>
+                            <span class="text-sm text-gray-500">Remboursement OPCO</span>
                         </div>
                         <a href="contact.html?formation=carte-g&message=Je%20souhaite%20m%27inscrire%20%C3%A0%20la%20formation%20Gestion%20Immobili%C3%A8re%20(Carte%20G).%20Merci%20de%20me%20recontacter%20pour%20finaliser%20mon%20inscription."
                             class="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-4 px-6 rounded-lg hover:from-blue-700 hover:to-blue-800 transition font-bold text-center block shadow-lg transform hover:scale-105">
@@ -781,20 +922,18 @@
                     <ul class="space-y-2 text-gray-400">
                         <li><a href="index.html" class="hover:text-white transition">Accueil</a></li>
                         <li><a href="methodes.html" class="hover:text-white transition">Nos méthodes</a></li>
-                        <li><a href="#" class="hover:text-white transition">À propos</a></li>
-                        <li><a href="#" class="hover:text-white transition">Blog</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="font-semibold mb-4">Contact</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li>📧 contact@helloforma.org</li>
-                        <li>📞 01 77 62 77 16</li>
-                        <li>📱 07 57 93 34 79</li>
-                        <li>📍 21 Place de la République<br>7500 HT3 Paris</li>
+                        <li> contact@helloforma.org</li>
+                        <li> 01 77 62 77 16</li>
+                        <li> 07 57 93 34 79</li>
+                        <li> 21 Place de la République<br>75003 Paris</li>
                     </ul>
-                    <ul class="space-y-1 text-gray-500 HT text-xs mt-4">
+                    <ul class="space-y-1 text-gray-500 text-xs mt-4">
                         <li>SIRET: 90832988100019</li>
                         <li>NDA: 11 75 64978 75</li>
                         <li>Qualiopi N° 2405 OF Ind 0</li>
@@ -803,7 +942,7 @@
             </div>
 
             <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-                <p>&copy; 2024 HelloForma. Tous droits réservés.</p>
+                <p>&copy; 2025 HelloForma. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
@@ -852,8 +991,8 @@
 
                 <div class="border-t pt-6 flex flex-col sm:flex-row gap-4 justify-between items-center">
                     <div>
-                        <div class="text-3xl font-bold text-helloforma-blue">500 HT€</div>
-                        <div class="text-sm text-gray-500 HT">Remboursement OPCO</div>
+                        <div class="text-3xl font-bold text-helloforma-blue">500€ TTC</div>
+                        <div class="text-sm text-gray-500">Remboursement OPCO</div>
                     </div>
                     <div class="flex gap-3">
                         <button onclick="closeModal()"
@@ -1074,7 +1213,7 @@
             'intelligence-artificielle': {
                 title: 'Intelligence Artificielle',
                 category: 'Digital & Technologies',
-                duration: '60h',
+                duration: '42h',
                 level: 'Avancé',
                 certification: 'Oui',
                 description: 'Plongez dans le monde fascinant de l\'intelligence artificielle et du machine learning. Cette formation approfondie vous permettra de comprendre, concevoir et déployer des solutions d\'IA, du machine learning classique au deep learning, en passant par le traitement du langage naturel et la vision par ordinateur.',
@@ -1304,14 +1443,39 @@
             }
         });
 
-        // Initialize AOS
-        AOS.init({
-            duration: 800,
-            once: true
+        // Wait for all scripts to load
+        window.addEventListener('load', function() {
+            // Initialize AOS
+            AOS.init({
+                duration: 800,
+                once: true
+            });
+
+            // Initialize Feather Icons
+            if (typeof feather !== 'undefined') {
+                feather.replace();
+                
+                // Replace again after a short delay to catch any late-rendered elements
+                setTimeout(function() {
+                    feather.replace();
+                }, 100);
+            }
         });
 
-        // Initialize Feather Icons
-        feather.replace();
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
 
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {

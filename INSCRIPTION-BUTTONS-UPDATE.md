@@ -5,18 +5,21 @@
 ### 1. Bouton Modal "S'inscrire maintenant" (formations.html)
 
 **Avant:**
+
 ```html
 <button class="...">S'inscrire maintenant</button>
 ```
 
 **Après:**
+
 ```html
 <a id="modalInscriptionBtn" href="index.html#contact" class="...">
-    S'inscrire maintenant
+  S'inscrire maintenant
 </a>
 ```
 
 **Fonctionnalité:**
+
 - Le bouton redirige vers le formulaire de contact
 - Le lien est dynamiquement mis à jour avec les informations de la formation
 - Le message est pré-rempli avec les détails de la formation
@@ -24,13 +27,17 @@
 ### 2. Boutons Cartes Immobilières (formations.html)
 
 #### Carte T - Transaction Immobilière
+
 **Lien mis à jour:**
+
 ```
 index.html#contact?formation=carte-t&message=Je souhaite m'inscrire à la formation Transaction Immobilière (Carte T). Merci de me recontacter pour finaliser mon inscription.
 ```
 
 #### Carte G - Gestion Immobilière
+
 **Lien mis à jour:**
+
 ```
 index.html#contact?formation=carte-g&message=Je souhaite m'inscrire à la formation Gestion Immobilière (Carte G). Merci de me recontacter pour finaliser mon inscription.
 ```
@@ -38,6 +45,7 @@ index.html#contact?formation=carte-g&message=Je souhaite m'inscrire à la format
 ### 3. Script de Pré-remplissage (index.html)
 
 **Ajouté à la fin du fichier:**
+
 - Détecte les paramètres URL `formation` et `message`
 - Pré-remplit automatiquement le champ message du formulaire
 - Sélectionne automatiquement le type de formation dans le dropdown
@@ -97,12 +105,14 @@ Le script mappe les IDs de formation aux options du dropdown:
 ## Avantages
 
 ### Pour l'Utilisateur
+
 ✅ Gain de temps - pas besoin de retaper le nom de la formation
 ✅ Moins d'erreurs - le nom de la formation est correct
 ✅ Expérience fluide - transition naturelle vers l'inscription
 ✅ Contexte préservé - sait exactement quelle formation l'intéresse
 
 ### Pour HelloForma
+
 ✅ Meilleur taux de conversion - moins de friction
 ✅ Données structurées - sait quelle formation génère des leads
 ✅ Suivi facilité - peut analyser quelles formations sont populaires
@@ -114,8 +124,8 @@ Le script mappe les IDs de formation aux options du dropdown:
 2. **Modal** → Lit les informations, clique "S'inscrire maintenant"
 3. **Formulaire Contact** → Voit le message pré-rempli:
    ```
-   Je souhaite m'inscrire à la formation "Développement Web" 
-   (40h, Digital & Technologies). Merci de me recontacter 
+   Je souhaite m'inscrire à la formation "Développement Web"
+   (40h, Digital & Technologies). Merci de me recontacter
    pour finaliser mon inscription.
    ```
 4. **Utilisateur** → Remplit nom, email, téléphone

@@ -113,17 +113,31 @@
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="formations.html" class="nav-link text-gray-700 hover:text-helloforma-blue">Formations</a>
                     <a href="methodes.html" class="nav-link text-helloforma-blue font-medium">Méthodes</a>
-                    <a href="index.html#certifications"
-                        class="nav-link text-gray-700 hover:text-helloforma-blue">Certifications</a>
-                    <a href="index.html#contact"
+                    <a href="immobilier.html" class="nav-link text-gray-700 hover:text-helloforma-blue">Immobilier</a>
+                    <a href="contact.html"
                         class="px-6 py-2 bg-helloforma-blue text-white rounded-lg hover:bg-helloforma-dark transition font-medium">
                         Nous Contacter
                     </a>
                 </div>
 
-                <button class="md:hidden">
-                    <i data-feather="menu"></i>
+                <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-helloforma-blue">
+                    <i data-feather="menu" class="w-6 h-6"></i>
                 </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-4 py-4 space-y-3">
+                <a href="formations.html"
+                    class="block py-2 text-gray-700 hover:text-helloforma-blue hover:bg-gray-50 rounded-lg px-3 transition">Formations</a>
+                <a href="methodes.html"
+                    class="block py-2 text-helloforma-blue font-medium hover:bg-gray-50 rounded-lg px-3 transition">Méthodes</a>
+                <a href="immobilier.html"
+                    class="block py-2 text-gray-700 hover:text-helloforma-blue hover:bg-gray-50 rounded-lg px-3 transition">Immobilier</a>
+                <a href="contact.html"
+                    class="block py-2 bg-helloforma-blue text-white rounded-lg px-3 text-center hover:bg-helloforma-dark transition">Nous
+                    Contacter</a>
             </div>
         </div>
     </nav>
@@ -232,7 +246,7 @@
                     <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
                         <i data-feather="layers" class="text-helloforma-blue"></i>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Blended Learning</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Apprentissage mixte</h3>
                     <p class="text-gray-600 mb-4">
                         Combinaison optimale entre présentiel et distanciel pour s'adapter à tous les profils
                         d'apprentissage.
@@ -248,7 +262,7 @@
                     <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
                         <i data-feather="zap" class="text-helloforma-accent"></i>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Microlearning</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Micro-Apprentissage</h3>
                     <p class="text-gray-600 mb-4">
                         Modules courts et ciblés de 5-15 minutes pour une assimilation optimale et une intégration
                         facile.
@@ -264,7 +278,7 @@
                     <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                         <i data-feather="tool" class="text-purple-600"></i>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Learning by Doing</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Apprentissage par la Pratique</h3>
                     <p class="text-gray-600 mb-4">
                         Apprentissage par la pratique avec des projets concrets et des mises en situation réelles.
                     </p>
@@ -279,7 +293,7 @@
                     <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
                         <i data-feather="users" class="text-orange-600"></i>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Peer Learning</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Apprentissage Collaboratif</h3>
                     <p class="text-gray-600 mb-4">
                         Apprentissage collaboratif favorisant les échanges et le partage d'expériences entre pairs.
                     </p>
@@ -292,9 +306,9 @@
 
                 <div class="method-card bg-white rounded-xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="400">
                     <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-6">
-                        <i data-feather="gamepad-2" class="text-pink-600"></i>
+                        <i data-feather="star" class="text-pink-600"></i>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Gamification</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Apprendre en Jouant</h3>
                     <p class="text-gray-600 mb-4">
                         Éléments ludiques, challenges et récompenses pour maintenir l'engagement et la motivation.
                     </p>
@@ -309,7 +323,7 @@
                     <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
                         <i data-feather="trending-up" class="text-teal-600"></i>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Adaptive Learning</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Apprentissage Adaptatif</h3>
                     <p class="text-gray-600 mb-4">
                         Parcours personnalisés qui s'adaptent automatiquement au niveau et au rythme de chaque
                         apprenant.
@@ -531,16 +545,17 @@
             </div>
 
             <!-- Formation Package Highlight -->
-            <div class="mt-16 bg-gradient-to-br from-helloforma-blue to-helloforma-dark rounded-2xl shadow-2xl p-10 text-white relative overflow-hidden" data-aos="fade-up">
+            <div class="mt-16 bg-gradient-to-br from-helloforma-blue to-helloforma-dark rounded-2xl shadow-2xl p-10 text-white relative overflow-hidden"
+                data-aos="fade-up">
                 <!-- Motif de fond décoratif -->
                 <div class="absolute top-0 right-0 w-64 h-64 opacity-10">
                     <svg viewBox="0 0 200 200" class="w-full h-full">
-                        <circle cx="100" cy="100" r="80" fill="none" stroke="currentColor" stroke-width="2"/>
-                        <circle cx="100" cy="100" r="60" fill="none" stroke="currentColor" stroke-width="1"/>
-                        <circle cx="100" cy="100" r="40" fill="none" stroke="currentColor" stroke-width="1"/>
+                        <circle cx="100" cy="100" r="80" fill="none" stroke="currentColor" stroke-width="2" />
+                        <circle cx="100" cy="100" r="60" fill="none" stroke="currentColor" stroke-width="1" />
+                        <circle cx="100" cy="100" r="40" fill="none" stroke="currentColor" stroke-width="1" />
                     </svg>
                 </div>
-                
+
                 <div class="relative z-10">
                     <div class="text-center mb-10">
                         <div class="inline-flex items-center bg-white/20 rounded-full px-6 py-2 mb-6">
@@ -549,31 +564,35 @@
                         </div>
                         <h3 class="text-3xl font-bold mb-4">42h de Formation Intensive</h3>
                         <p class="text-xl text-blue-100 max-w-2xl mx-auto">
-                            Accès illimité à notre plateforme e-learning pendant 12 mois pour un apprentissage flexible et approfondi
+                            Accès illimité à notre plateforme e-learning pendant 12 mois pour un apprentissage flexible
+                            et approfondi
                         </p>
                     </div>
 
                     <div class="grid md:grid-cols-3 gap-8">
                         <div class="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <div
+                                class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <i data-feather="clock" class="w-8 h-8"></i>
                             </div>
                             <div class="text-3xl font-bold mb-2">42h</div>
                             <div class="text-blue-100">Formation intensive</div>
                             <div class="text-sm text-blue-200 mt-2">Présentiel + Distanciel</div>
                         </div>
-                        
+
                         <div class="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <div
+                                class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <i data-feather="monitor" class="w-8 h-8"></i>
                             </div>
                             <div class="text-3xl font-bold mb-2">12 mois</div>
                             <div class="text-blue-100">Accès e-learning</div>
                             <div class="text-sm text-blue-200 mt-2">Plateforme 24h/24</div>
                         </div>
-                        
+
                         <div class="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <div
+                                class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <i data-feather="users" class="w-8 h-8"></i>
                             </div>
                             <div class="text-3xl font-bold mb-2">∞</div>
@@ -583,7 +602,8 @@
                     </div>
 
                     <div class="mt-10 text-center">
-                        <div class="inline-flex items-center bg-emerald-500 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg">
+                        <div
+                            class="inline-flex items-center bg-emerald-500 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg">
                             <i data-feather="check-circle" class="w-6 h-6 mr-3"></i>
                             Conforme aux exigences réglementaires
                         </div>
@@ -740,18 +760,16 @@
                     <ul class="space-y-2 text-gray-400">
                         <li><a href="index.html" class="hover:text-white transition">Accueil</a></li>
                         <li><a href="formations.html" class="hover:text-white transition">Formations</a></li>
-                        <li><a href="#" class="hover:text-white transition">À propos</a></li>
-                        <li><a href="#" class="hover:text-white transition">Blog</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="font-semibold mb-4">Contact</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li>📧 contact@helloforma.org</li>
-                        <li>📞 01 77 62 77 16</li>
-                        <li>📱 07 57 93 34 79</li>
-                        <li>📍 21 Place de la République<br>75003 Paris</li>
+                        <li> contact@helloforma.org</li>
+                        <li> 01 77 62 77 16</li>
+                        <li> 07 57 93 34 79</li>
+                        <li> 21 Place de la République<br>75003 Paris</li>
                     </ul>
                     <ul class="space-y-1 text-gray-500 text-xs mt-4">
                         <li>SIRET: 90832988100019</li>
@@ -762,7 +780,7 @@
             </div>
 
             <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-                <p>&copy; 2024 HelloForma. Tous droits réservés.</p>
+                <p>&copy; 2025 HelloForma. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
@@ -776,6 +794,21 @@
 
         // Initialize Feather Icons
         feather.replace();
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
 
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
